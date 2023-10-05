@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e12d54d2-506c-438b-925f-771e354b24e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/target/classes/org/example/CalculatorController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/target/classes/org/example/CalculatorModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/target/classes/org/example/CalculatorView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/target/classes/org/example/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/target/classes/org/example/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/src/main/java/org/example/CalculatorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/src/main/java/org/example/CalculatorModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/src/main/java/org/example/CalculatorView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/target/classes/org/example/CalculatorController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/target/classes/org/example/CalculatorModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/target/classes/org/example/CalculatorView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/MVCExample/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/.idea/20200497-TranMinhQuang.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/HelloWorld/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/src/main/java/com/example/demo/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/src/main/java/org/example/CalculatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/src/main/java/com/example/demo/CalculatorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/src/main/java/org/example/CalculatorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/src/main/java/com/example/demo/CalculatorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/src/main/java/org/example/CalculatorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/src/main/java/com/example/demo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/20200497-TranMinhQuang/Calculator/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200497-TranMinhQuang/demo/src/main/resources/com/example/demo/hello-view.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2W2AayC5EgAmLFbKX0GG2enIWT4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/SourceCode/ThietKeXDPM/2023.1-144929-01/Homework01/20200497-TranMinhQuang",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SourceCode\ThietKeXDPM\2023.1-144929-01\Homework01\20200497-TranMinhQuang" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e12d54d2-506c-438b-925f-771e354b24e6" name="Changes" comment="" />
+      <created>1695920368680</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695920368680</updated>
+      <workItem from="1695920369929" duration="276000" />
+      <workItem from="1695920656999" duration="86000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
