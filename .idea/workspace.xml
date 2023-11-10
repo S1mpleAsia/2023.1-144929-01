@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afde2768-6b6c-4f19-9a91-ee17b1f7adf2" name="Changes" comment="bt3 TranMinhQuang" />
+    <list default="true" id="afde2768-6b6c-4f19-9a91-ee17b1f7adf2" name="Changes" comment="bt3 TranMinhQuang">
+      <change afterPath="$PROJECT_DIR$/Homework04/TranMinhQuang-20200497/TranMinhQuang-bt4.asta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework04/TranMinhQuang-20200497/image/Lấy thông tin chấm công sq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework04/TranMinhQuang-20200497/image/Lấy thông tin chấm công.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework04/TranMinhQuang-20200497/image/Lấy thông tin nhân viên sq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework04/TranMinhQuang-20200497/image/Lấy thông tin nhân viên.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework04/VuTungDuong-20200125/VuTungDuong-BT4.asta.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,22 +35,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/SourceCode/TKXDPhanMem/2023.1-144929-01",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/SourceCode/TKXDPhanMem/2023.1-144929-01&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SourceCode\TKXDPhanMem\2023.1-144929-01\Homework03\20200497-TranMinhQuang" />
@@ -59,6 +67,7 @@
       <workItem from="1695915801983" duration="24000" />
       <workItem from="1698916447851" duration="671000" />
       <workItem from="1698933483583" duration="1223000" />
+      <workItem from="1699574245841" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="bt3 TranMinhQuang">
       <created>1698340345720</created>
