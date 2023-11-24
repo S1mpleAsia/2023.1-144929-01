@@ -1,0 +1,16 @@
+-- Create table user if it does not exist
+
+CREATE TABLE user
+(
+    id        INT PRIMARY KEY AUTO_INCREMENT,
+    username  VARCHAR(50),
+    password  VARCHAR(50),
+    user_role VARCHAR(50)
+);
+
+-- Insert data into database
+
+INSERT INTO user (username, password, user_role)
+VALUES ('s1mpleasia', '123456', 'Department Leader'),
+       ('lecuong', '123456', 'Employee'),
+       ('vuz', '123456', 'HR')
