@@ -8,6 +8,7 @@ import subsystem.database.IUserRepository;
 import java.util.List;
 
 public class UserRepository extends AbstractRepository<User> implements IUserRepository {
+    private static UserRepository userRepository = null;
 
     @Override
     public User findById(Integer id) {
@@ -32,5 +33,13 @@ public class UserRepository extends AbstractRepository<User> implements IUserRep
 
         List<User> users = query(sql, UserMapper.getInstance());
         return users.isEmpty() ? null : users;
+    }
+
+    public static UserRepository getInstance() {
+        if (userRepository == null) {
+            userRepository = new UserRepository();
+        }
+
+        return userRepository;
     }
 }

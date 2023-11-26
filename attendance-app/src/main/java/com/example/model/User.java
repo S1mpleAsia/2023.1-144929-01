@@ -4,7 +4,7 @@ public class User {
     private Integer id;
     private String username;
     private String password;
-    private String userRole;
+    private String userRole; // column user_role
 
     public User(Integer id, String username, String password, String userRole) {
         this.id = id;

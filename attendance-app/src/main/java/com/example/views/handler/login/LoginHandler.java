@@ -6,19 +6,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import model.User;
-import subsystem.database.IUserRepository;
 import subsystem.database.impl.UserRepository;
+import usecase.login.ILoginController;
+import usecase.login.LoginController;
+import utils.Constraints;
 import utils.Utils;
-import views.handler.BaseScreenHandler;
+import views.handler.BaseHandler;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
-public class LoginHandler implements Initializable {
+public class LoginHandler extends BaseHandler implements Initializable {
     public static Logger LOGGER = Utils.getLogger(LoginHandler.class.getName());
     @FXML
     private TextField username;
@@ -26,19 +27,22 @@ public class LoginHandler implements Initializable {
     private PasswordField password;
     @FXML
     private Button loginButton;
-    private IUserRepository userRepository;
+    private ILoginController loginController;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        userRepository = new UserRepository();
+        loginController = new LoginController(UserRepository.getInstance());
     }
 
-    public void login(ActionEvent actionEvent) {
-        User user = userRepository.findByUsernameAndPassword(getUsername(username), getPassword(password));
+    public void login(ActionEvent actionEvent) throws IOException {
+        User user = loginController.findByUsernameAndPassword(getUsername(username), getPassword(password));
 
         if(user == null) throw new RuntimeException("User not found");
 
         LOGGER.info("Login successfully");
+
+        /* TODO: Check role */
+        navigate(Constraints.HOME_SCREEN_PATH, null, actionEvent);
     }
 
     private String getUsername(TextField username) {
