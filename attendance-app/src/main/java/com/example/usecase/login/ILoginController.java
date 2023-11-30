@@ -1,7 +1,7 @@
 package usecase.login;
 
-import model.User;
+import model.Account;
 
 public interface ILoginController {
-    User findByUsernameAndPassword(String username, String password);
+    Account findByUsernameAndPassword(String username, String password);
 }

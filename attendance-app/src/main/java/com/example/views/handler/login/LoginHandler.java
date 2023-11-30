@@ -6,7 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import model.User;
+import model.Account;
 import subsystem.database.impl.UserRepository;
 import usecase.login.ILoginController;
 import usecase.login.LoginController;
@@ -35,9 +35,9 @@ public class LoginHandler extends BaseHandler implements Initializable {
     }
 
     public void login(ActionEvent actionEvent) throws IOException {
-        User user = loginController.findByUsernameAndPassword(getUsername(username), getPassword(password));
+        Account account = loginController.findByUsernameAndPassword(getUsername(username), getPassword(password));
 
-        if(user == null) throw new RuntimeException("User not found");
+        if(account == null) throw new RuntimeException("User not found");
 
         LOGGER.info("Login successfully");
 

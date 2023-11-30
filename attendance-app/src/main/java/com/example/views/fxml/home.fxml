@@ -78,7 +78,7 @@
             <Label layoutX="55.0" layoutY="27.0" text="Danh sách nhân viên" />
             <Label layoutX="55.0" layoutY="70.0" text="Bộ phận" />
             <TextField fx:id="departmentLabel" disable="true" layoutX="122.0" layoutY="66.0" text="Đại học Bách Khoa" />
-            <TableView fx:id="table" layoutX="55.0" layoutY="156.0" onMousePressed="#handlePressRow" prefHeight="200.0" prefWidth="620.0">
+            <TableView fx:id="table" layoutX="55.0" layoutY="156.0" onMousePressed="#handleViewOverview" prefHeight="200.0" prefWidth="620.0">
               <columns>
                 <TableColumn fx:id="id" prefWidth="106.39996337890625" text="Id" />
                 <TableColumn fx:id="name" prefWidth="152.00003051757812" text="Họ và tên" />

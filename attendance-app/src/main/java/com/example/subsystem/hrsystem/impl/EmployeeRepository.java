@@ -1,5 +1,6 @@
 package subsystem.hrsystem.impl;
 
+import mapper.impl.EmployeeMapper;
 import model.Employee;
 import subsystem.AbstractRepository;
 import subsystem.hrsystem.IEmployeeRepository;
@@ -7,7 +8,7 @@ import subsystem.hrsystem.IEmployeeRepository;
 import java.util.List;
 
 public class EmployeeRepository extends AbstractRepository<Employee> implements IEmployeeRepository {
-    public static EmployeeRepository employeeRepository = null;
+    private static EmployeeRepository employeeRepository = null;
 
     public static EmployeeRepository getInstance() {
         if(employeeRepository == null) employeeRepository = new EmployeeRepository();
@@ -15,10 +16,10 @@ public class EmployeeRepository extends AbstractRepository<Employee> implements 
         return employeeRepository;
     }
     @Override
-    public List<Employee> findAllByDepartment(String department) {
-        String sql = "SELECT * FROM employee WHERE deparment = ?";
+    public List<Employee> findAllByDepartmentId(Integer departmentId) {
+        String sql = "SELECT * FROM employee WHERE department_id = ?";
 
-//        List<Employee> employeeList = query(sql, )
-        return null;
+        List<Employee> employeeList = query(sql, EmployeeMapper.getInstance(), departmentId);
+        return employeeList.isEmpty() ? null : employeeList;
     }
 }

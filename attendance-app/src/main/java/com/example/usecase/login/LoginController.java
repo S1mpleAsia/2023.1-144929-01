@@ -1,6 +1,6 @@
 package usecase.login;
 
-import model.User;
+import model.Account;
 import subsystem.database.IUserRepository;
 
 public class LoginController implements ILoginController {
@@ -11,7 +11,7 @@ public class LoginController implements ILoginController {
     }
 
     @Override
-    public User findByUsernameAndPassword(String username, String password) {
+    public Account findByUsernameAndPassword(String username, String password) {
         return userRepository.findByUsernameAndPassword(username, password);
     }
 }
