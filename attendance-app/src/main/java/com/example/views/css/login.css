@@ -1,0 +1,30 @@
+#forgot-label {
+    -fx-cursor: hand;
+}
+
+#forgot-label:hover {
+    -fx-text-fill: #57b846;
+}
+
+#login-btn {
+    -fx-cursor: hand;
+    -fx-background-color: #57b846;
+    -fx-background-radius: 30;
+}
+
+#login-btn:hover {
+    -fx-background-color: #343a40;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.8), 10, 0, 2, 2);
+}
+
+#username, #password {
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-width: 2;
+    -fx-background-color: #e6e6e6;
+    -fx-prompt-text-fill: gray;
+}
+
+#username:focused, #password:focused {
+    -fx-border-color: #57b846;
+}
