@@ -1,19 +1,21 @@
 package model;
 
-public class User {
+public class Account {
     private Integer id;
     private String username;
     private String password;
-    private String userRole; // column user_role
+    private String role; // column user_role
+    private Integer employeeId;
 
-    public User(Integer id, String username, String password, String userRole) {
+    public Account() {
+    }
+
+    public Account(Integer id, String username, String password, String role, Integer employeeId) {
         this.id = id;
         this.username = username;
         this.password = password;
-        this.userRole = userRole;
-    }
-
-    public User() {
+        this.role = role;
+        this.employeeId = employeeId;
     }
 
     public Integer getId() {
@@ -40,11 +42,19 @@ public class User {
         this.password = password;
     }
 
-    public String getUserRole() {
-        return userRole;
+    public String getRole() {
+        return role;
     }
 
-    public void setUserRole(String userRole) {
-        this.userRole = userRole;
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
     }
 }

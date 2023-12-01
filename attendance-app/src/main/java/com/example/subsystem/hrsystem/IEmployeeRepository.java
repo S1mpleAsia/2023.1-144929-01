@@ -6,5 +6,5 @@ import subsystem.GenericRepository;
 import java.util.List;
 
 public interface IEmployeeRepository extends GenericRepository<Employee> {
-    List<Employee> findAllByDepartment(String department);
+    List<Employee> findAllByDepartmentId(Integer departmentId);
 }

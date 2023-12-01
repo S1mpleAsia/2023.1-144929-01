@@ -1,12 +1,12 @@
 package subsystem.database;
 
-import model.User;
+import model.Account;
 import subsystem.GenericRepository;
 
 import java.util.List;
 
-public interface IUserRepository extends GenericRepository<User> {
-    User findById(Integer id);
-    User findByUsernameAndPassword(String username, String password);
-    List<User> findAll();
+public interface IUserRepository extends GenericRepository<Account> {
+    Account findById(Integer id);
+    Account findByUsernameAndPassword(String username, String password);
+    List<Account> findAll();
 }
