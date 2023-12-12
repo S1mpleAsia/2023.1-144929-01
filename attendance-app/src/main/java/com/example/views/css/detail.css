@@ -1,0 +1,24 @@
+#info-label, #infoLabel {
+    -fx-opacity: 1.0;
+    -fx-background-color: #dbdada;
+}
+
+#more-info-btn {
+    -fx-background-color: #fff;
+    -fx-text-fill: #00a9e3;
+    -fx-font-weight: bold;
+    -fx-border-color: #00a9e3;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+#export-btn {
+    -fx-background-color: #fff;
+    -fx-text-fill: #ef3870;
+    -fx-font-weight: bold;
+    -fx-border-color: #ef3870;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}

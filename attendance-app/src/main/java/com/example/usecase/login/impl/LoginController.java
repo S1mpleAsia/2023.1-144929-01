@@ -1,12 +1,13 @@
-package usecase.login;
+package usecase.login.impl;
 
 import model.Account;
-import subsystem.database.IUserRepository;
+import subsystem.database.IAccountRepository;
+import usecase.login.ILoginController;
 
 public class LoginController implements ILoginController {
-    private final IUserRepository userRepository;
+    private final IAccountRepository userRepository;
 
-    public LoginController(IUserRepository userRepository) {
+    public LoginController(IAccountRepository userRepository) {
         this.userRepository = userRepository;
     }
 

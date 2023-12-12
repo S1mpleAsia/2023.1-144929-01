@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.detail.WorkerDetailAttendanceHandler">
+   <children>
+      <Label layoutX="271.0" layoutY="36.0" text="Chi tiêt chấm công">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="39.0" layoutY="103.0" prefHeight="528.0" prefWidth="475.0" style="-fx-border-width: 1; -fx-border-color: black; -fx-background-color: white;" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="136.0">
+         <children>
+            <Label id="header" layoutX="70.0" layoutY="31.0" prefWidth="490.0" style="-fx-border-width: 0 0 1px 0; -fx-border-color: black; -fx-background-color: #d3d3d3;" text="Phiếu chấm công" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="98.0" text="Họ tên:" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="131.0" text="Chức vụ:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="176.0" text="Mã NV:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="220.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="226.0" text="Ca 1:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="303.0" text="Ca 2:" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="340.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="369.0" text="Ca 3:" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField id="infoLabel" fx:id="nameLabel" editable="false" layoutX="102.0" layoutY="96.0" prefHeight="27.0" prefWidth="166.0" AnchorPane.topAnchor="96.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField id="info-label" fx:id="typeLabel" editable="false" layoutX="102.0" layoutY="156.0" prefHeight="27.0" prefWidth="166.0" AnchorPane.topAnchor="156.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField id="info-label" fx:id="employeeIdLabel" editable="false" layoutX="102.0" layoutY="216.0" prefHeight="27.0" prefWidth="128.0" AnchorPane.topAnchor="216.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField id="info-label" fx:id="shiftOneLabel" editable="false" layoutX="103.0" layoutY="276.0" prefHeight="27.0" prefWidth="147.0" AnchorPane.topAnchor="276.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField id="info-label" fx:id="shiftTwoLabel" editable="false" layoutX="103.0" layoutY="336.0" prefHeight="27.0" prefWidth="147.0" AnchorPane.topAnchor="336.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField id="info-label" fx:id="shiftThreeLabel" editable="false" layoutX="103.0" layoutY="396.0" prefHeight="27.0" prefWidth="147.0" AnchorPane.topAnchor="396.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <Label layoutX="263.0" layoutY="221.0" text="Ngày chấm công:" AnchorPane.topAnchor="221.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField id="info-label" fx:id="attendanceDate" editable="false" layoutX="389.0" layoutY="217.0" prefHeight="27.0" prefWidth="114.0" AnchorPane.topAnchor="217.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <Button id="more-info-btn" layoutX="357.0" layoutY="469.0" mnemonicParsing="false" onAction="#handleGetParticularInfo" text="Xem thêm thông tin">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button id="export-btn" layoutX="582.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleExport" text="Export file">
+         <padding>
+            <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
+         </padding></Button>
+      <Separator layoutX="46.0" layoutY="35.0" prefHeight="9.0" prefWidth="650.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>
