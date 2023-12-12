@@ -7,9 +7,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import model.Account;
-import subsystem.database.impl.UserRepository;
+import subsystem.database.impl.AccountRepository;
 import usecase.login.ILoginController;
-import usecase.login.LoginController;
+import usecase.login.impl.LoginController;
 import utils.Constraints;
 import utils.Utils;
 import views.handler.BaseHandler;
@@ -31,7 +31,7 @@ public class LoginHandler extends BaseHandler implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loginController = new LoginController(UserRepository.getInstance());
+        loginController = new LoginController(AccountRepository.getInstance());
     }
 
     public void login(ActionEvent actionEvent) throws IOException {
@@ -42,7 +42,7 @@ public class LoginHandler extends BaseHandler implements Initializable {
         LOGGER.info("Login successfully");
 
         /* TODO: Check role */
-        navigate(Constraints.HOME_SCREEN_PATH, null, actionEvent);
+        navigate(Constraints.HOME_SCREEN_PATH, Constraints.HOME_STYLESHEET_PATH, actionEvent);
     }
 
     private String getUsername(TextField username) {

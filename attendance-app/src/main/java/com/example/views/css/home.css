@@ -1,0 +1,17 @@
+#departmentLabel, #employeeNameLabel {
+    -fx-opacity: 1.0;
+    -fx-background-color: #dbdada;
+}
+
+#search .placeholder .label {
+    -fx-opacity: 1.0;
+    -fx-text-fill: linen;
+}
+
+#back-btn:hover {
+    -fx-cursor: hand;
+}
+
+.column-active {
+    -fx-background-color: red;
+}

@@ -1,4 +1,4 @@
-package usecase.home.dto;
+package dto;
 
 public class TableDataDTO {
     private String employeeId;

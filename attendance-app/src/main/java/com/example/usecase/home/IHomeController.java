@@ -1,6 +1,6 @@
-package usecase.home.controller;
+package usecase.home;
 
-import usecase.home.dto.TableDataDTO;
+import dto.TableDataDTO;
 
 import java.util.List;
 

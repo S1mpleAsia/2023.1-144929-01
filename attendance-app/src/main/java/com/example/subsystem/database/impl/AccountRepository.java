@@ -3,16 +3,16 @@ package subsystem.database.impl;
 import mapper.impl.AccountMapper;
 import model.Account;
 import subsystem.AbstractRepository;
-import subsystem.database.IUserRepository;
+import subsystem.database.IAccountRepository;
 
 import java.util.List;
 
-public class UserRepository extends AbstractRepository<Account> implements IUserRepository {
-    private static UserRepository userRepository = null;
+public class AccountRepository extends AbstractRepository<Account> implements IAccountRepository {
+    private static AccountRepository accountRepository = null;
 
     @Override
     public Account findById(Integer id) {
-        String sql = "SELECT * FROM [user] WHERE id = ?";
+        String sql = "SELECT * FROM account WHERE id = ?";
 
         List<Account> accounts = query(sql, AccountMapper.getInstance(), id);
         return accounts.isEmpty() ? null : accounts.get(0);
@@ -29,17 +29,17 @@ public class UserRepository extends AbstractRepository<Account> implements IUser
 
     @Override
     public List<Account> findAll() {
-        String sql = "SELECT * FROM [user]";
+        String sql = "SELECT * FROM account";
 
         List<Account> accounts = query(sql, AccountMapper.getInstance());
         return accounts.isEmpty() ? null : accounts;
     }
 
-    public static UserRepository getInstance() {
-        if (userRepository == null) {
-            userRepository = new UserRepository();
+    public static AccountRepository getInstance() {
+        if (accountRepository == null) {
+            accountRepository = new AccountRepository();
         }
 
-        return userRepository;
+        return accountRepository;
     }
 }

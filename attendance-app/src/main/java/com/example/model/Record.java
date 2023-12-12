@@ -1,16 +1,16 @@
 package model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Record {
     private Integer id;
-    private Integer employeeId;
-    private Date checkTime;
+    private String employeeId;
+    private LocalDateTime checkTime;
 
     public Record() {
     }
 
-    public Record(Integer id, Integer employeeId, Date checkTime) {
+    public Record(Integer id, String employeeId, LocalDateTime checkTime) {
         this.id = id;
         this.employeeId = employeeId;
         this.checkTime = checkTime;
@@ -24,19 +24,19 @@ public class Record {
         this.id = id;
     }
 
-    public Integer getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(Integer employeeId) {
+    public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
 
-    public Date getCheckTime() {
+    public LocalDateTime getCheckTime() {
         return checkTime;
     }
 
-    public void setCheckTime(Date checkTime) {
+    public void setCheckTime(LocalDateTime checkTime) {
         this.checkTime = checkTime;
     }
 }
