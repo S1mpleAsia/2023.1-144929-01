@@ -7,12 +7,12 @@ public class Employee {
     private String gender;
     private Integer age;
     private Integer departmentId; // map to department_id
-    private Integer type;
+    private String type;
 
     public Employee() {
     }
 
-    public Employee(Integer id, String employeeId, String name, String gender, Integer age, Integer departmentId, Integer type) {
+    public Employee(Integer id, String employeeId, String name, String gender, Integer age, Integer departmentId, String type) {
         this.id = id;
         this.employeeId = employeeId;
         this.name = name;
@@ -70,11 +70,11 @@ public class Employee {
         this.departmentId = departmentId;
     }
 
-    public Integer getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

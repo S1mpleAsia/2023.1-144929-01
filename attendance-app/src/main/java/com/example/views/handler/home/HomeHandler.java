@@ -9,18 +9,25 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import subsystem.hrsystem.impl.DepartmentRepository;
 import subsystem.hrsystem.impl.EmployeeRepository;
-import usecase.home.controller.HomeController;
-import usecase.home.controller.IHomeController;
-import usecase.home.dto.TableDataDTO;
+import usecase.home.impl.HomeController;
+import usecase.home.IHomeController;
+import dto.TableDataDTO;
+import utils.Constraints;
+import utils.store.ContextFactory;
+import views.handler.BaseHandler;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HomeHandler implements Initializable {
+public class HomeHandler extends BaseHandler implements Initializable {
     @FXML
     private TableColumn<?, ?> age;
+
+    @FXML
+    private AnchorPane content;
 
     @FXML
     private TableColumn<?, ?> deparment;
@@ -40,6 +47,9 @@ public class HomeHandler implements Initializable {
 
     @FXML
     private TableView<TableDataDTO> table;
+
+    @FXML
+    private TextField searchField;
 
     private IHomeController homeController;
 
@@ -68,7 +78,10 @@ public class HomeHandler implements Initializable {
         if(event.isPrimaryButtonDown() && event.getClickCount() == 2) {
             Object selectedItem = table.getSelectionModel().getSelectedItem();
 
-            System.out.println(selectedItem);
+            ContextFactory.getContext().putItem("employeeInfo", selectedItem);
+
+            changeContentView(Constraints.WORKER_MONTHLY_SCREEN_PATH, content);
+
         }
     }
 

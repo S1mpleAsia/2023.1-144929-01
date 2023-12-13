@@ -19,7 +19,7 @@ public class EmployeeMapper implements RowMapper<Employee> {
             employee.setGender(rs.getString("gender"));
             employee.setAge(rs.getInt("age"));
             employee.setDepartmentId(rs.getInt("department_id"));
-            employee.setType(rs.getInt("type"));
+            employee.setType(rs.getString("type"));
 
             return employee;
         } catch (SQLException e) {

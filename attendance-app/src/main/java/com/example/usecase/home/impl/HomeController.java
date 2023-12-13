@@ -1,10 +1,11 @@
-package usecase.home.controller;
+package usecase.home.impl;
 
 import model.Department;
 import model.Employee;
 import subsystem.hrsystem.IDepartmentRepository;
 import subsystem.hrsystem.IEmployeeRepository;
-import usecase.home.dto.TableDataDTO;
+import dto.TableDataDTO;
+import usecase.home.IHomeController;
 
 import java.util.ArrayList;
 import java.util.Collections;
