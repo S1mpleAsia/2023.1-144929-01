@@ -37,6 +37,7 @@ public class HomeHandler implements Initializable {
     @FXML
     private TableColumn<?, ?> name;
 
+
     @FXML
     private TableView<TableDataDTO> table;
 

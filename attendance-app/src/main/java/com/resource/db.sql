@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS account
     username  VARCHAR(50),
     password  VARCHAR(50),
     role VARCHAR(50),
-    employeeId INT
+    employee_id INT
 );
 
 /* Department Table */
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS department
 CREATE TABLE IF NOT EXISTS employee
 (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    employeeId VARCHAR(20),
+    employee_id VARCHAR(20),
     name VARCHAR(50),
     gender VARCHAR(10),
     age INT,
@@ -34,17 +34,17 @@ CREATE TABLE IF NOT EXISTS employee
 CREATE TABLE IF NOT EXISTS record
 (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    employeeId VARCHAR(20),
+    employee_id VARCHAR(20),
     check_time TIMESTAMP
 );
 
 -- Insert data into database
-INSERT INTO account (username, password, role, employeeId)
+INSERT INTO account (username, password, role, employee_id)
 VALUES ('s1mpleasia', '123456', 'Manager', 1),
        ('lecuong', '123456', 'Worker', 2),
        ('vuz', '123456', 'HR', 3);
 
-INSERT INTO employee (employeeId, name, gender, age, department_id, type)
+INSERT INTO employee (employee_id, name, gender, age, department_id, type)
 VALUES ('BK_20200125', 'Vũ Tùng Dương', 'Male', 22, 1, 2),
        ('BK_20204637', 'Lê Thạch Cương', 'Female', 22, 1, 3),
        ('NEU_20204625', 'Nguyễn Thế Vũ', 'Male', 20, 2, 1),
