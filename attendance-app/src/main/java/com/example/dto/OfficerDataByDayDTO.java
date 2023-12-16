@@ -4,19 +4,20 @@ import model.Record;
 
 import java.util.List;
 
-public class OfficerDataByDayDTO {
+public class OfficerDataByDayDTO extends EmployeeDataByDayDTO {
     private Boolean morningShift;
     private Boolean afternoonShift;
-    private Double lateCheckIn;
-    private Double earlyCheckout;
+    private Double morningTime;
+    private Double afternoonTime;
+    private Double hourLate;
+    private Double earlyLeave;
     private Double overtime;
-    private List<Record> recordList;
 
     public OfficerDataByDayDTO() {
     }
 
     public OfficerDataByDayDTO(List<Record> recordList) {
-        this.recordList = recordList;
+        super(recordList);
     }
 
     public Boolean getMorningShift() {
@@ -35,28 +36,20 @@ public class OfficerDataByDayDTO {
         this.afternoonShift = afternoonShift;
     }
 
-    public Double getLateCheckIn() {
-        return lateCheckIn;
+    public Double getHourLate() {
+        return hourLate;
     }
 
-    public void setLateCheckIn(Double lateCheckIn) {
-        this.lateCheckIn = lateCheckIn;
+    public void setHourLate(Double hourLate) {
+        this.hourLate = hourLate;
     }
 
-    public Double getEarlyCheckout() {
-        return earlyCheckout;
+    public Double getEarlyLeave() {
+        return earlyLeave;
     }
 
-    public void setEarlyCheckout(Double earlyCheckout) {
-        this.earlyCheckout = earlyCheckout;
-    }
-
-    public List<Record> getRecordList() {
-        return recordList;
-    }
-
-    public void setRecordList(List<Record> recordList) {
-        this.recordList = recordList;
+    public void setEarlyLeave(Double earlyLeave) {
+        this.earlyLeave = earlyLeave;
     }
 
     public Double getOvertime() {
@@ -65,5 +58,25 @@ public class OfficerDataByDayDTO {
 
     public void setOvertime(Double overtime) {
         this.overtime = overtime;
+    }
+
+    public Double getMorningTime() {
+        return morningTime;
+    }
+
+    public void setMorningTime(Double morningTime) {
+        this.morningTime = morningTime;
+    }
+
+    public Double getAfternoonTime() {
+        return afternoonTime;
+    }
+
+    public void setAfternoonTime(Double afternoonTime) {
+        this.afternoonTime = afternoonTime;
+    }
+
+    public Double getSummary() {
+        return morningTime + afternoonTime + overtime;
     }
 }

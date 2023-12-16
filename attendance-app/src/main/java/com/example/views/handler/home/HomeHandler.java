@@ -16,6 +16,7 @@ import usecase.home.impl.HomeController;
 import usecase.home.IHomeController;
 import dto.TableDataDTO;
 import utils.Constraints;
+import utils.EmployeeType;
 import utils.store.ContextFactory;
 import views.handler.BaseHandler;
 
@@ -48,6 +49,9 @@ public class HomeHandler extends BaseHandler implements Initializable {
     private TableView<TableDataDTO> table;
 
     @FXML
+    private TableColumn<?, ?> employeeType;
+
+    @FXML
     private TextField searchField;
 
     private IHomeController homeController;
@@ -67,6 +71,7 @@ public class HomeHandler extends BaseHandler implements Initializable {
         gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         age.setCellValueFactory(new PropertyValueFactory<>("age"));
         deparment.setCellValueFactory(new PropertyValueFactory<>("departmentName"));
+        employeeType.setCellValueFactory(new PropertyValueFactory<>("employeeType"));
 
         table.setItems(tableData);
     }
@@ -74,12 +79,16 @@ public class HomeHandler extends BaseHandler implements Initializable {
 
     @FXML
     void handleViewOverview(MouseEvent event) {
-        if(event.isPrimaryButtonDown() && event.getClickCount() == 2) {
-            Object selectedItem = table.getSelectionModel().getSelectedItem();
+        if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
+            TableDataDTO selectedItem = table.getSelectionModel().getSelectedItem();
 
             ContextFactory.getContext().putItem("employeeInfo", selectedItem);
 
-            changeContentView(Constraints.WORKER_MONTHLY_SCREEN_PATH, content);
+            if (selectedItem.getEmployeeType().toUpperCase().equals(EmployeeType.WORKER.name())) {
+                changeContentView(Constraints.WORKER_MONTHLY_SCREEN_PATH, content);
+            } else if (selectedItem.getEmployeeType().toUpperCase().equals(EmployeeType.OFFICER.name())) {
+                changeContentView(Constraints.OFFICER_MONTHLY_SCREEN_PATH, content);
+            }
 
         }
     }

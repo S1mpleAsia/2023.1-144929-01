@@ -5,8 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import subsystem.timekeepingmachine.impl.RecordRepository;
-import usecase.detail.IMonthlyAttendanceController;
-import usecase.detail.impl.WorkerMonthlyAttendanceController;
+import usecase.detail.IDetailController;
+import usecase.detail.impl.WorkerDetailController;
 import dto.WorkerDataByDayDTO;
 import dto.TableDataDTO;
 import utils.Constraints;
@@ -41,16 +41,15 @@ public class WorkerDetailAttendanceHandler extends BaseHandler implements Initia
 
     @FXML
     private TextField typeLabel;
-    private IMonthlyAttendanceController monthlyAttendanceController;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         TableDataDTO employeeInfo = (TableDataDTO) ContextFactory.getContext().getItem("employeeInfo");
         LocalDate observerDate = (LocalDate) ContextFactory.getContext().getItem("date");
 
-        monthlyAttendanceController = new WorkerMonthlyAttendanceController(RecordRepository.getInstance());
-        WorkerDataByDayDTO workerDataByDay = (WorkerDataByDayDTO) monthlyAttendanceController.getDataByDay(employeeInfo.getEmployeeId(), observerDate);
-        ContextFactory.getContext().putItem("workerDataByDay", workerDataByDay);
+        IDetailController<WorkerDataByDayDTO> monthlyAttendanceController = new WorkerDetailController(RecordRepository.getInstance());
+        WorkerDataByDayDTO workerDataByDay = monthlyAttendanceController.getDataByDay(employeeInfo.getEmployeeId(), observerDate);
+        ContextFactory.getContext().putItem("employeeDataByDay", workerDataByDay);
 
         nameLabel.setText(employeeInfo.getEmployeeName());
         employeeIdLabel.setText(employeeInfo.getEmployeeId());

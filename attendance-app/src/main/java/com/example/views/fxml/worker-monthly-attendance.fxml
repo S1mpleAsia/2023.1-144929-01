@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="date" prefHeight="590.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.detail.MonthlyAttendanceHandler">
+<AnchorPane fx:id="date" prefHeight="590.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.monthly.WorkerMonthlyAttendanceHandler">
    <children>
       <Label layoutX="360.0" layoutY="22.0" text="Thông tin chấm công">
          <font>

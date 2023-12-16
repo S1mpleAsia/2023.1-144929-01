@@ -93,7 +93,7 @@
                     <font>
                         <Font size="13.0" />
                     </font></TextField>
-                <TextField id="info-label" fx:id="shiftThreeLabel" editable="false" layoutX="117.0" layoutY="398.0" prefHeight="29.0" prefWidth="117.0" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="398.0">
+                <TextField id="info-label" fx:id="lateLabel" editable="false" layoutX="117.0" layoutY="398.0" prefHeight="29.0" prefWidth="117.0" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="398.0">
                     <padding>
                         <Insets bottom="5.0" left="10.0" top="5.0" />
                     </padding>
@@ -122,7 +122,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField id="info-label" fx:id="shiftThreeLabel2" editable="false" layoutX="357.0" layoutY="398.0" prefHeight="29.0" prefWidth="117.0">
+            <TextField id="info-label" fx:id="earlyLabel" editable="false" layoutX="357.0" layoutY="398.0" prefHeight="29.0" prefWidth="117.0">
                <padding>
                   <Insets bottom="5.0" left="10.0" top="5.0" />
                </padding>
@@ -135,7 +135,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField id="info-label" fx:id="shiftTwoLabel1" editable="false" layoutX="119.0" layoutY="454.0" prefHeight="27.0" prefWidth="147.0" AnchorPane.leftAnchor="115.0">
+            <TextField id="info-label" fx:id="overtimeLabel" editable="false" layoutX="119.0" layoutY="454.0" prefHeight="27.0" prefWidth="147.0" AnchorPane.leftAnchor="115.0">
                <padding>
                   <Insets bottom="5.0" left="10.0" top="5.0" />
                </padding>
@@ -148,7 +148,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField id="info-label" fx:id="shiftTwoLabel11" editable="false" layoutX="114.0" layoutY="512.0" prefHeight="27.0" prefWidth="147.0" AnchorPane.leftAnchor="114.0">
+            <TextField id="info-label" fx:id="summary" editable="false" layoutX="114.0" layoutY="512.0" prefHeight="27.0" prefWidth="147.0" AnchorPane.leftAnchor="114.0">
                <padding>
                   <Insets bottom="5.0" left="10.0" top="5.0" />
                </padding>

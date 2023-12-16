@@ -88,16 +88,17 @@
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <TableView fx:id="table" layoutX="55.0" layoutY="156.0" onMousePressed="#handleViewOverview" prefHeight="363.0" prefWidth="694.0">
+            <TableView fx:id="table" layoutX="17.0" layoutY="156.0" onMousePressed="#handleViewOverview" prefHeight="363.0" prefWidth="825.0">
               <columns>
                 <TableColumn fx:id="id" prefWidth="106.39996337890625" text="Id" />
                 <TableColumn fx:id="name" prefWidth="152.00003051757812" text="Họ và tên" />
-                  <TableColumn fx:id="gender" prefWidth="114.4000244140625" text="Giới tính" />
-                  <TableColumn fx:id="age" prefWidth="97.5999755859375" text="Tuổi" />
-                  <TableColumn fx:id="deparment" prefWidth="224.0" text="Đơn vị" />
+                  <TableColumn fx:id="gender" prefWidth="90.39996337890625" text="Giới tính" />
+                  <TableColumn fx:id="age" prefWidth="122.4000244140625" text="Tuổi" />
+                  <TableColumn fx:id="employeeType" prefWidth="122.4000244140625" text="Chức vụ" />
+                  <TableColumn fx:id="deparment" prefWidth="228.80001220703127" text="Đơn vị" />
               </columns>
             </TableView>
-            <TextField id="search" fx:id="searchField" layoutX="575.0" layoutY="65.0" prefHeight="34.0" prefWidth="188.0" promptText="Tìm kiếm" style="-: 1;" AnchorPane.leftAnchor="575.0">
+            <TextField id="search" fx:id="searchField" layoutX="655.0" layoutY="63.0" prefHeight="34.0" prefWidth="188.0" promptText="Tìm kiếm" style="-: 1;" AnchorPane.leftAnchor="655.0">
                <font>
                   <Font size="14.0" />
                </font>
@@ -108,7 +109,7 @@
                   <Insets left="35.0" />
                </padding>
             </TextField>
-            <ImageView fitHeight="27.0" fitWidth="50.0" layoutX="575.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="27.0" fitWidth="50.0" layoutX="655.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/login.png" />
                </image>
