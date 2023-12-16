@@ -1,5 +1,6 @@
 package views.handler.detail;
 
+import dto.EmployeeDataByDayDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -40,7 +41,7 @@ public class ParticularInfoHandler extends BaseHandler implements Initializable 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        WorkerDataByDayDTO workerDataByDay = (WorkerDataByDayDTO) ContextFactory.getContext().getItem("workerDataByDay");
+        EmployeeDataByDayDTO workerDataByDay = (EmployeeDataByDayDTO) ContextFactory.getContext().getItem("employeeDataByDay");
         TableDataDTO employeeInfo = (TableDataDTO) ContextFactory.getContext().getItem("employeeInfo");
         LocalDate observerDate = (LocalDate) ContextFactory.getContext().getItem("date");
 

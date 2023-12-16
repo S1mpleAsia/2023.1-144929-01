@@ -1,0 +1,69 @@
+package usecase.detail;
+
+import dto.TransformTime;
+import model.Record;
+import subsystem.timekeepingmachine.IRecordRepository;
+import utils.Utils;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public class AbstractDetailController<T> implements IDetailController<T> {
+    protected final IRecordRepository recordRepository;
+
+    public AbstractDetailController(IRecordRepository recordRepository) {
+        this.recordRepository = recordRepository;
+    }
+
+    @Override
+    public T getDataByDay(String employeeId, LocalDate date) {
+        return null;
+    }
+
+    @Override
+    public List<Record> getRecordListByEmployeeIdAndDate(String employeeId, LocalDate date) {
+        return recordRepository.getRecordListByEmployeeIdAndDate(employeeId, date);
+    }
+
+    @Override
+    public TransformTime calculateShift(String employeeId, String startShift, String endShift, String standardStart, String standardEnd) {
+        Record startShiftBefore = recordRepository.getLastRecordOfTime(employeeId, startShift);
+        Record startShiftAfter = recordRepository.getFirstRecordOfTime(employeeId, startShift);
+        Record endShiftBefore = recordRepository.getLastRecordOfTime(employeeId, endShift);
+        Record endShiftAfter = recordRepository.getFirstRecordOfTime(employeeId, endShift);
+
+        double startHour = 0.0, endHour = 0.0;
+
+        if (startShiftBefore != null && Utils.getTimeFromLocalDateTime(startShiftBefore.getCheckTime()) >=
+                Utils.getTimeFromLocalDateTime(Utils.dateTimeConvert(standardStart))) {
+            double time = Utils.getTimeFromLocalDateTime(startShiftBefore.getCheckTime());
+            if (time <= 8.0) startHour = 8.0;
+            else if (time > 12.0 && time <= 13.5) startHour = 13.5;
+            else if (time > 17.5 && time <= 18.0) startHour = 18.0;
+        } else {
+            if (startShiftAfter == null) return new TransformTime(0.0, 0.0, 0.0);
+
+            startHour = Utils.getTimeFromLocalDateTime(startShiftAfter.getCheckTime());
+        }
+
+        if (endShiftAfter != null
+                && Utils.getTimeFromLocalDateTime(endShiftAfter.getCheckTime()) <=
+                Utils.getTimeFromLocalDateTime(Utils.dateTimeConvert(standardEnd))) {
+            double time = Utils.getTimeFromLocalDateTime(endShiftAfter.getCheckTime());
+
+            if (time >= 12 && time < 13.5) endHour = 12.0;
+            if (time >= 17.5 && time < 18) endHour = 17.5;
+            if (time >= 22) endHour = 22.0;
+        } else {
+            if (endShiftBefore == null) return new TransformTime(0.0, 0.0, 0.0);
+
+            assert startShiftBefore != null;
+            double startTime = Utils.getTimeFromLocalDateTime(startShiftBefore.getCheckTime());
+
+            endHour = Utils.getTimeFromLocalDateTime(endShiftBefore.getCheckTime());
+            if (endHour == startTime) return new TransformTime(0.0, 0.0, 0.0);
+        }
+
+        return new TransformTime(Utils.roundValue(endHour - startHour), startHour, endHour);
+    }
+}

@@ -15,15 +15,14 @@ public class Utils {
         return Logger.getLogger(className);
     }
 
-    public static Date getDate(LocalDate localDate) {
-        try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
-            String dateString = localDate.format(formatter);
+    public static LocalDateTime dateTimeConvert(String dateString) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return LocalDateTime.parse(dateString ,formatter);
+    }
 
-            return new SimpleDateFormat("yyyy-M-d").parse(dateString);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
+    public static LocalDate simpleConvert(String dateString) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return LocalDate.parse(dateString, formatter);
     }
 
     public static LocalDate convert(String dateString) {

@@ -31,16 +31,16 @@ public class RecordRepository extends AbstractRepository<Record> implements IRec
     @Override
     public Record getFirstRecordOfTime(String employeeId, String stringDate) {
         LocalDate nextDay = Utils.convert(stringDate).plusDays(1);
-        LocalDate prevDay = Utils.convert(stringDate).minusDays(1);
+        String prevDay = stringDate.split(" ")[0];
 
         String sql = "SELECT * FROM record " +
                 "WHERE employee_id = ? " +
-                "AND check_time >= ? " +
-                "AND check_time <= ? " +
+                "AND check_time > ? " +
+                "AND check_time < ? " +
                 "AND check_time >= ? " +
                 "ORDER BY check_time ASC " +
                 "LIMIT 1";
-        List<Record> recordList = query(sql, RecordMapper.getInstance(), employeeId, prevDay.toString(), nextDay.toString(), stringDate);
+        List<Record> recordList = query(sql, RecordMapper.getInstance(), employeeId, prevDay, nextDay.toString(), stringDate);
 
         return recordList.isEmpty() ? null : recordList.get(0);
     }
@@ -48,16 +48,17 @@ public class RecordRepository extends AbstractRepository<Record> implements IRec
     @Override
     public Record getLastRecordOfTime(String employeeId, String stringDate) {
         LocalDate nextDay = Utils.convert(stringDate).plusDays(1);
-        LocalDate prevDay = Utils.convert(stringDate).minusDays(1);
+        String prevDay = stringDate.split(" ")[0];
+
 
         String sql = "SELECT * FROM record " +
                 "WHERE employee_id = ? " +
-                "AND check_time >= ? " +
-                "AND check_time <= ?" +
+                "AND check_time > ? " +
+                "AND check_time < ? " +
                 "AND check_time <= ? " +
                 "ORDER BY check_time DESC " +
                 "LIMIT 1";
-        List<Record> recordList = query(sql, RecordMapper.getInstance(), employeeId, prevDay.toString(), nextDay.toString(), stringDate);
+        List<Record> recordList = query(sql, RecordMapper.getInstance(), employeeId, prevDay, nextDay.toString(), stringDate);
 
         return recordList.isEmpty() ? null : recordList.get(0);
     }

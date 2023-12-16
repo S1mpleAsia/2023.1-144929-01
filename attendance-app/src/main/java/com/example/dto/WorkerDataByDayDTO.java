@@ -1,21 +1,18 @@
 package dto;
 
 import model.Record;
-import utils.Utils;
 
 import java.util.List;
 
-public class WorkerDataByDayDTO {
+public class WorkerDataByDayDTO extends EmployeeDataByDayDTO {
     private Double shift1;
     private Double shift2;
     private Double shift3;
-    private List<Record> recordList;
-
     public WorkerDataByDayDTO() {
     }
 
     public WorkerDataByDayDTO(List<Record> recordList) {
-        this.recordList = recordList;
+        super(recordList);
     }
 
     public Double getShift1() {
@@ -40,14 +37,6 @@ public class WorkerDataByDayDTO {
 
     public void setShift3(Double shift3) {
         this.shift3 = shift3;
-    }
-
-    public List<Record> getRecordList() {
-        return recordList;
-    }
-
-    public void setRecordList(List<Record> recordList) {
-        this.recordList = recordList;
     }
 
     public void calculateShift() {
