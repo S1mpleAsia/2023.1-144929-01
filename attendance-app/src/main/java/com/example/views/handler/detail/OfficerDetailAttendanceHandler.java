@@ -54,7 +54,7 @@ public class OfficerDetailAttendanceHandler extends BaseHandler implements Initi
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         TableDataDTO employeeInfo = (TableDataDTO) ContextFactory.getContext().getItem("employeeInfo");
-        LocalDate observerDate = (LocalDate) ContextFactory.getContext().getItem("date");
+        String observerDate = ((LocalDate) ContextFactory.getContext().getItem("date")).toString();
 
         IDetailController<OfficerDataByDayDTO> monthlyAttendanceController = new OfficerDetailController(RecordRepository.getInstance());
         OfficerDataByDayDTO officerDataByDay = monthlyAttendanceController.getDataByDay(employeeInfo.getEmployeeId(), observerDate);
@@ -62,7 +62,7 @@ public class OfficerDetailAttendanceHandler extends BaseHandler implements Initi
 
         nameLabel.setText(employeeInfo.getEmployeeName());
         employeeIdLabel.setText(employeeInfo.getEmployeeId());
-        attendanceDate.setText(observerDate.toString());
+        attendanceDate.setText(observerDate);
         typeLabel.setText(EmployeeType.OFFICER.name());
 
         morningLabel.setText(officerDataByDay.getMorningShift() ? "Có mặt" : "Vắng mặt");

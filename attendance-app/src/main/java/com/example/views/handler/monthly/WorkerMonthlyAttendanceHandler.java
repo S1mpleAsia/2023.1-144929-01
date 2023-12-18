@@ -124,7 +124,7 @@ public class WorkerMonthlyAttendanceHandler extends MonthlyHandler implements In
             Label shift3 = (Label)  children.get(3);
 
             WorkerDataByDayDTO dataByDay = monthlyAttendanceController.getDataByDay(employeeId,
-                    Utils.simpleConvert(columnDate.getText().split("\\n")[1]));
+                    columnDate.getText().split("\\n")[1]);
 
             shift1.setText(dataByDay.getShift1().toString());
             shift2.setText(dataByDay.getShift2().toString());

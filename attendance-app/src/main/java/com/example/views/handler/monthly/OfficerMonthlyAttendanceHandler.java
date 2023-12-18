@@ -146,7 +146,7 @@ public class OfficerMonthlyAttendanceHandler extends MonthlyHandler implements I
             Label earlyLeave = (Label) children.get(4);
 
             OfficerDataByDayDTO dataByDay = officerDetailController.getDataByDay(employeeId,
-                    Utils.simpleConvert(columnDate.getText().split("\\n")[1]));
+                    columnDate.getText().split("\\n")[1]);
 
             morningSession.setText(dataByDay.getMorningShift() ? "Có" : "Vắng");
             afternoonSession.setText(dataByDay.getAfternoonShift() ? "Có" : "Vắng");

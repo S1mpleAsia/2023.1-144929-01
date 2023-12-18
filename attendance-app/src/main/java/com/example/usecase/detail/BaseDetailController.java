@@ -6,19 +6,34 @@ import subsystem.timekeepingmachine.IRecordRepository;
 import utils.Utils;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Objects;
 
-public class AbstractDetailController<T> implements IDetailController<T> {
+public abstract class BaseDetailController<T> implements IDetailController<T> {
     protected final IRecordRepository recordRepository;
 
-    public AbstractDetailController(IRecordRepository recordRepository) {
+    public BaseDetailController(IRecordRepository recordRepository) {
         this.recordRepository = recordRepository;
     }
 
     @Override
-    public T getDataByDay(String employeeId, LocalDate date) {
-        return null;
+    public T getDataByDay(String employeeId, String date) {
+        LocalDate localDate = validateDate(date);
+        return getData(employeeId, localDate);
     }
+
+    public LocalDate validateDate(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        try {
+            return LocalDate.parse(date, formatter);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public abstract T getData(String employeeId, LocalDate date);
 
     @Override
     public List<Record> getRecordListByEmployeeIdAndDate(String employeeId, LocalDate date) {
@@ -57,8 +72,7 @@ public class AbstractDetailController<T> implements IDetailController<T> {
         } else {
             if (endShiftBefore == null) return new TransformTime(0.0, 0.0, 0.0);
 
-            assert startShiftBefore != null;
-            double startTime = Utils.getTimeFromLocalDateTime(startShiftBefore.getCheckTime());
+            double startTime = Utils.getTimeFromLocalDateTime(Objects.requireNonNullElse(startShiftBefore, startShiftAfter).getCheckTime());
 
             endHour = Utils.getTimeFromLocalDateTime(endShiftBefore.getCheckTime());
             if (endHour == startTime) return new TransformTime(0.0, 0.0, 0.0);

@@ -45,7 +45,7 @@ public class WorkerDetailAttendanceHandler extends BaseHandler implements Initia
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         TableDataDTO employeeInfo = (TableDataDTO) ContextFactory.getContext().getItem("employeeInfo");
-        LocalDate observerDate = (LocalDate) ContextFactory.getContext().getItem("date");
+        String observerDate = ((LocalDate) ContextFactory.getContext().getItem("date")).toString();
 
         IDetailController<WorkerDataByDayDTO> monthlyAttendanceController = new WorkerDetailController(RecordRepository.getInstance());
         WorkerDataByDayDTO workerDataByDay = monthlyAttendanceController.getDataByDay(employeeInfo.getEmployeeId(), observerDate);
