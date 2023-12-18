@@ -106,6 +106,6 @@ public class AbstractRepository<T> implements GenericRepository<T> {
 
     @Override
     public void update(String sql, Object... params) {
-
+        
     }
 }

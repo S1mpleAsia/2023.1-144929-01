@@ -16,4 +16,6 @@ public class AbstractMonthlyAttendanceController {
     public List<Record> getRecordListByEmployeeIdAndDate(String employeeId, LocalDate date) {
         return recordRepository.getRecordListByEmployeeIdAndDate("BK_20200125" ,date);
     }
+
+
 }

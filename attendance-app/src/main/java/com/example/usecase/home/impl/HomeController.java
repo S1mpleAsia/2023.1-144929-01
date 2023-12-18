@@ -1,44 +1,45 @@
 package usecase.home.impl;
 
+import model.Attendance;
 import model.Department;
 import model.Employee;
+import subsystem.database.IAttendanceRepository;
 import subsystem.hrsystem.IDepartmentRepository;
 import subsystem.hrsystem.IEmployeeRepository;
 import dto.TableDataDTO;
 import usecase.home.IHomeController;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class HomeController implements IHomeController {
-    private final IEmployeeRepository employeeRepository;
-    private final IDepartmentRepository departmentRepository;
+    private final IAttendanceRepository attendanceRepository;
 
-    public HomeController(IEmployeeRepository employeeRepository, IDepartmentRepository departmentRepository) {
-        this.employeeRepository = employeeRepository;
-        this.departmentRepository = departmentRepository;
+    public HomeController(IAttendanceRepository attendanceRepository) {
+        this.attendanceRepository = attendanceRepository;
     }
 
     @Override
     public List<TableDataDTO> getTableData(Integer departmentId) {
-        Department department = departmentRepository.findByDepartmentId(departmentId);
-
-        if(department == null) throw new RuntimeException("No department found");
-
-        List<Employee> employeeList = employeeRepository.findAllByDepartmentId(departmentId);
 
         List<TableDataDTO> tableData = new ArrayList<>(Collections.emptyList());
 
-        employeeList.forEach(employee -> {
+        List<Attendance> attendanceList = attendanceRepository.allAttendance();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+
+        DateTimeFormatter formatDay = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        attendanceList.forEach(attendance -> {
             TableDataDTO tableDataDTO  = new TableDataDTO();
-
-            tableDataDTO.setDepartmentName(department.getDepartmentName());
-            tableDataDTO.setGender(employee.getGender());
-            tableDataDTO.setAge(employee.getAge());
-            tableDataDTO.setEmployeeId(employee.getEmployeeId());
-            tableDataDTO.setEmployeeName(employee.getName());
-
+            tableDataDTO.setDepartmentName(attendance.getDepartmentName());
+            tableDataDTO.setEmployeeId(attendance.getEmployeeId());
+            tableDataDTO.setEmployeeName(attendance.getEmployeeName());
+            tableDataDTO.setTimeIn(attendance.getTimeIn().format(formatter));
+            tableDataDTO.setTimeOut(attendance.getTimeOut().format(formatter));
+            tableDataDTO.setDate(attendance.getTimeIn().format(formatDay));
             tableData.add(tableDataDTO);
         });
 

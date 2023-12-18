@@ -8,17 +8,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.detail.ParticularInfoHandler">
+<AnchorPane prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.detail.ParticularInfoHandler">
    <children>
-      <Label layoutX="285.0" layoutY="31.0" text="Thông tin chi tiết">
+      <Label layoutX="287.0" layoutY="31.0" prefHeight="27.0" prefWidth="314.0" text="Chi tiết chỉnh sửa yêu cầu số 100002">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tableView" layoutX="67.0" layoutY="130.0" prefHeight="243.0" prefWidth="535.0">
+      <TableView fx:id="tableView" layoutX="67.0" layoutY="130.0" prefHeight="243.0" prefWidth="734.0">
         <columns>
-          <TableColumn fx:id="date" editable="false" prefWidth="192.79993438720703" sortable="false" text="Ngày chấm công" />
-            <TableColumn fx:id="checkTime" editable="false" prefWidth="342.4000549316406" sortable="false" text="Thời gian ghi nhận" />
+            <TableColumn fx:id="date" editable="false" prefWidth="110.0" sortable="false" text="Ngày tạo" />
+            <TableColumn fx:id="checkTime" editable="false" prefWidth="110.0" sortable="false" text="Ngày yêu cầu" />
+            <TableColumn fx:id="date1" editable="false" prefWidth="110.0" sortable="false" text="Giờ vào" />
+            <TableColumn fx:id="date2" editable="false" prefWidth="110.0" sortable="false" text="Giờ ra" />
+            <TableColumn fx:id="date3" editable="false" prefWidth="293.0" sortable="false" text="Lý do" />
         </columns>
       </TableView>
       <Label fx:id="nameLabel" layoutX="67.0" layoutY="74.0" text="Công nhân Nguyễn Văn A">
@@ -29,7 +32,12 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="522.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleConfirm" text="Xác nhận">
+      <Button fx:id="confirm" layoutX="692.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="27.0" prefWidth="100.0" text="Xác nhận">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="refuse" layoutX="570.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleConfirm" prefWidth="100.0" text="Từ chối">
          <padding>
             <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
          </padding>

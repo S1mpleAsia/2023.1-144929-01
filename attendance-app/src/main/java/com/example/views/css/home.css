@@ -15,3 +15,15 @@
 .column-active {
     -fx-background-color: red;
 }
+
+.navbar-active{
+    -fx-font-weight: bold;
+}
+
+.navbar-inactive{
+    -fx-font-weight: normal;
+}
+
+.navbar-component {
+    -fx-cursor: hand;
+}

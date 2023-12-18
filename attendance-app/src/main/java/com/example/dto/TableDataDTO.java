@@ -3,19 +3,20 @@ package dto;
 public class TableDataDTO {
     private String employeeId;
     private String employeeName;
-    private String gender;
-    private Integer age;
     private String departmentName;
-
+    private String timeIn;
+    private String timeOut;
+    private String Date;
     public TableDataDTO() {
     }
 
-    public TableDataDTO(String employeeId, String employeeName, String gender, Integer age, String departmentName) {
+    public TableDataDTO(String employeeId, String employeeName, String departmentName, String timeOut, String timeIn, String Date) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
-        this.gender = gender;
-        this.age = age;
         this.departmentName = departmentName;
+        this.Date = Date;
+        this.timeIn = timeIn;
+        this.timeOut = timeOut;
     }
 
     public String getEmployeeId() {
@@ -34,27 +35,35 @@ public class TableDataDTO {
         this.employeeName = employeeName;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     public String getDepartmentName() {
         return departmentName;
     }
 
     public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
+    }
+
+    public String getTimeIn() {
+        return timeIn;
+    }
+
+    public void setTimeIn(String timeIn) {
+        this.timeIn = timeIn;
+    }
+
+    public String getTimeOut() {
+        return timeOut;
+    }
+
+    public void setTimeOut(String timeOut) {
+        this.timeOut = timeOut;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
     }
 }

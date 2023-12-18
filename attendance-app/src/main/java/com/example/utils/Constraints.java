@@ -5,11 +5,21 @@ public class Constraints {
     public static final String LOGIN_STYLESHEET_PATH = "/views/css/login.css";
     public static final String HOME_SCREEN_PATH = "/views/fxml/home.fxml";
     public static final String HOME_STYLESHEET_PATH = "/views/css/home.css";
+
+    // Dương Vũ
     public static final String WORKER_MONTHLY_SCREEN_PATH = "/views/fxml/worker-monthly-attendance.fxml";
     public static final String WORKER_DETAIL_SCREEN_PATH = "/views/fxml/worker-detail-attendance.fxml";
     public static final String WORKER_DETAIL_STYLESHEET_PATH = "/views/css/detail.css";
     public static final String WORKER_PARTICULAR_SCREEN_PATH = "/views/fxml/particular-info.fxml";
     public static final String WORKER_PARTICULAR_STYLESHEET_PATH = "/views/css/particular-info.css";
+    // end
+
+    // Pemond
+    public static final String LIST_EDITANCE_REQUEST_PATH = "/views/fxml/editance-request.fxml";
+    public static final String REQUEST_DETAIL_PATH = "/views/fxml/detail-request.fxml";
+    public static final String REQUEST_DETAIL_STYLESHEET_PATH = "/views/css/request-detail.css";
+    public static final String REQUEST_EDIT_PATH = "/views/fxml/detail-edit-request.fxml";
+    public static final String REQUEST_DELETE_PATH = "/views/fxml/detail-delete-request.fxml";
 
 // ------- Database ----------
     /* Le Cuong */
@@ -20,7 +30,6 @@ public class Constraints {
     public static final String DB_USER = "root";
     public static final String DB_PASSWORD = "";
 
-<<<<<<< HEAD
     /* End Le Cuong */
 
     /* Duong Vu */
@@ -32,7 +41,6 @@ public class Constraints {
 //    public static final String DB_PASSWORD = "";
 
     /* End Duong Vu */
-=======
 //    ------ Worker shift time ------
     public static final String START_SHIFT_1 = "08:00:00";
     public static final String END_SHIFT_1 = "12:00:00";
@@ -42,5 +50,4 @@ public class Constraints {
     public static final String END_SHIFT_3 = "22:00:00";
 
 //  ------ Officer check time -------
->>>>>>> 399d4c4161aa2a371c5b1b42fba2b9374c00a810
 }
