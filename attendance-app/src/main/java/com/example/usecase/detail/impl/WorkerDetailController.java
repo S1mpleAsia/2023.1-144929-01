@@ -2,17 +2,18 @@ package usecase.detail.impl;
 
 import dto.WorkerDataByDayDTO;
 import subsystem.timekeepingmachine.IRecordRepository;
-import usecase.detail.AbstractDetailController;
+import usecase.detail.BaseDetailController;
 import utils.Constraints;
 
 import java.time.LocalDate;
 
-public class WorkerDetailController extends AbstractDetailController<WorkerDataByDayDTO> {
+public class WorkerDetailController extends BaseDetailController<WorkerDataByDayDTO> {
     public WorkerDetailController(IRecordRepository recordRepository) {
         super(recordRepository);
     }
 
-    public WorkerDataByDayDTO getDataByDay(String employeeId, LocalDate date) {
+    @Override
+    public WorkerDataByDayDTO getData(String employeeId, LocalDate date) {
         String stringDate = date.toString();
 
         String startOfDay = stringDate + " " + Constraints.START_OF_DAY;

@@ -3,19 +3,19 @@ package usecase.detail.impl;
 import dto.OfficerDataByDayDTO;
 import dto.TransformTime;
 import subsystem.timekeepingmachine.IRecordRepository;
-import usecase.detail.AbstractDetailController;
+import usecase.detail.BaseDetailController;
 import utils.Constraints;
 import utils.Utils;
 
 import java.time.LocalDate;
 
-public class OfficerDetailController extends AbstractDetailController<OfficerDataByDayDTO> {
+public class OfficerDetailController extends BaseDetailController<OfficerDataByDayDTO> {
     public OfficerDetailController(IRecordRepository recordRepository) {
         super(recordRepository);
     }
 
     @Override
-    public OfficerDataByDayDTO getDataByDay(String employeeId, LocalDate date) {
+    public OfficerDataByDayDTO getData(String employeeId, LocalDate date) {
         String stringDate = date.toString();
 
         String startOfDay = stringDate + " " + Constraints.START_OF_DAY;
