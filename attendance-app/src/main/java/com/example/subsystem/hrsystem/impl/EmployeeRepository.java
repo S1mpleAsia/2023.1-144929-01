@@ -25,7 +25,7 @@ public class EmployeeRepository extends AbstractRepository<Employee> implements 
 
     @Override
     public Employee getEmployeeInfoById(Integer id) {
-        String sql = "SELECT * FROM employee WHERE employee_id = ?";
+        String sql = "SELECT * FROM employee WHERE id = ?";
 
         List<Employee> employeeList = query(sql, EmployeeMapper.getInstance(), id);
         if (employeeList == null || employeeList.isEmpty()) {

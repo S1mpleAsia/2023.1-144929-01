@@ -7,12 +7,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import model.Account;
+import model.Employee;
 import subsystem.database.impl.AccountRepository;
 import subsystem.hrsystem.impl.EmployeeRepository;
 import usecase.login.ILoginController;
 import usecase.login.impl.LoginController;
+import usecase.officer_home.iml.OfficerHomeController;
 import utils.Constraints;
 import utils.Utils;
+import utils.store.ContextFactory;
 import views.handler.BaseHandler;
 import views.handler.officer_home.OfficerHomeHandler;
 
@@ -56,16 +59,11 @@ public class LoginHandler extends BaseHandler implements Initializable {
     }
     private void checkUserRole(Account account, ActionEvent actionEvent) throws IOException {
         String role = account.getRole();
-
+        ContextFactory.getContext().putItem("userEmployeeId", account.getEmployeeId());
         if ("manager".equals(role)) {
             navigate(Constraints.HOME_SCREEN_PATH, Constraints.HOME_STYLESHEET_PATH, actionEvent);
 
         } else {
-            Integer employeeId = account.getEmployeeId();
-            EmployeeRepository employeeRepository = new EmployeeRepository(); // Initialize the repository
-            OfficerHomeHandler officerHomeHandler = new OfficerHomeHandler(employeeRepository);
-            officerHomeHandler.setEmployeeId(employeeId);
-
             navigate(Constraints.OFFICER_HOME_SCREEN_PATH, Constraints.OFFICER_HOME_STYLESHEET_PATH, actionEvent);
         }
     }

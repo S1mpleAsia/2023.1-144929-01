@@ -35,7 +35,7 @@
                      <image>
                         <Image url="@../images/attendance.png" />
                      </image></ImageView>
-                  <Label layoutX="62.0" layoutY="9.0" prefHeight="50.0" prefWidth="124.0" text="Chấm công đơn vị" AnchorPane.leftAnchor="66.0">
+                  <Label layoutX="62.0" layoutY="9.0" prefHeight="50.0" prefWidth="124.0" text="Bảng chấm công theo tháng" wrapText="true" AnchorPane.leftAnchor="66.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font></Label>
@@ -48,7 +48,7 @@
                         <Image url="@../images/edit.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="66.0" layoutY="9.0" prefHeight="50.0" prefWidth="156.0" text="Xử lý yêu cầu chỉnh sửa" AnchorPane.leftAnchor="66.0">
+                  <Label layoutX="66.0" layoutY="9.0" prefHeight="50.0" prefWidth="156.0" text="Quản lý yêu cầu" AnchorPane.leftAnchor="66.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -72,54 +72,59 @@
          </children>
       </AnchorPane>
       <Separator layoutX="230.0" layoutY="70.0" orientation="VERTICAL" prefHeight="637.0" prefWidth="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="70.0" />
-      <AnchorPane fx:id="content" layoutX="269.0" layoutY="114.0" prefHeight="360.0" prefWidth="510.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+      <AnchorPane fx:id="content" layoutX="269.0" layoutY="108.8" prefHeight="522.0" prefWidth="899.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="109.0">
          <children>
-            <Label layoutX="632.0" layoutY="114.0" text="Thông tin nhân viên">
+            <Label layoutX="564.0" layoutY="128.0" text="Thông tin nhân viên">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
-            <Label layoutX="568.0" layoutY="185.0" text="Họ và tên">
+            <Label layoutX="500.0" layoutY="199.0" text="Họ và tên">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
-            <TextField id="departmentLabel" fx:id="nameLabel" disable="true" layoutX="661.0" layoutY="178.0" prefHeight="34.0" prefWidth="178.0">
+            <TextField id="departmentLabel" fx:id="nameLabel" disable="true" layoutX="593.0" layoutY="192.0" prefHeight="34.0" prefWidth="178.0">
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <Label layoutX="568.0" layoutY="243.0" text="Chức vụ">
+            <Label layoutX="500.0" layoutY="257.0" text="Chức vụ">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField id="departmentLabel" fx:id="departmentLabel1" disable="true" layoutX="661.0" layoutY="236.0" prefHeight="34.0" prefWidth="178.0" text="Nhân viên văn phòng">
+            <TextField id="departmentLabel" fx:id="departmentLabel1" disable="true" layoutX="593.0" layoutY="250.0" prefHeight="34.0" prefWidth="178.0" text="Nhân viên văn phòng">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField id="departmentLabel" fx:id="employeeIdLabel" disable="true" layoutX="661.0" layoutY="289.0" prefHeight="34.0" prefWidth="178.0">
+            <TextField id="departmentLabel" fx:id="employeeIdLabel" disable="true" layoutX="593.0" layoutY="303.0" prefHeight="34.0" prefWidth="178.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Label layoutX="568.0" layoutY="296.0" text="Mã NV">
+            <Label layoutX="500.0" layoutY="310.0" text="Mã NV">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="568.0" layoutY="349.0" text="Mã đơn vị">
+            <Label layoutX="500.0" layoutY="363.0" text="Mã đơn vị">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField id="departmentLabel" fx:id="departmentIdLabel" disable="true" layoutX="663.0" layoutY="342.0" prefHeight="34.0" prefWidth="178.0">
+            <TextField id="departmentLabel" fx:id="departmentIdLabel" disable="true" layoutX="595.0" layoutY="356.0" prefHeight="34.0" prefWidth="178.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
+            <ImageView fitHeight="319.0" fitWidth="270.0" layoutX="123.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/blank-profile-photo.png" />
+               </image></ImageView>
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
