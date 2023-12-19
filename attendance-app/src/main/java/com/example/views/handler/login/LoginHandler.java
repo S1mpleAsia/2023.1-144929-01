@@ -8,11 +8,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import model.Account;
 import subsystem.database.impl.AccountRepository;
+import subsystem.hrsystem.impl.EmployeeRepository;
 import usecase.login.ILoginController;
 import usecase.login.impl.LoginController;
 import utils.Constraints;
 import utils.Utils;
 import views.handler.BaseHandler;
+import views.handler.officer_home.OfficerHomeHandler;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,7 +44,7 @@ public class LoginHandler extends BaseHandler implements Initializable {
         LOGGER.info("Login successfully");
 
         /* TODO: Check role */
-        navigate(Constraints.HOME_SCREEN_PATH, Constraints.HOME_STYLESHEET_PATH, actionEvent);
+        checkUserRole(account, actionEvent);
     }
 
     private String getUsername(TextField username) {
@@ -51,5 +53,20 @@ public class LoginHandler extends BaseHandler implements Initializable {
 
     private String getPassword(TextField password) {
         return password.getText();
+    }
+    private void checkUserRole(Account account, ActionEvent actionEvent) throws IOException {
+        String role = account.getRole();
+
+        if ("manager".equals(role)) {
+            navigate(Constraints.HOME_SCREEN_PATH, Constraints.HOME_STYLESHEET_PATH, actionEvent);
+
+        } else {
+            Integer employeeId = account.getEmployeeId();
+            EmployeeRepository employeeRepository = new EmployeeRepository(); // Initialize the repository
+            OfficerHomeHandler officerHomeHandler = new OfficerHomeHandler(employeeRepository);
+            officerHomeHandler.setEmployeeId(employeeId);
+
+            navigate(Constraints.OFFICER_HOME_SCREEN_PATH, Constraints.OFFICER_HOME_STYLESHEET_PATH, actionEvent);
+        }
     }
 }

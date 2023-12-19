@@ -15,8 +15,11 @@ public class Constraints {
     public static final String OFFICER_DETAIL_STYLESHEET_PATH = "/views/css/detail.css";
     public static final String OFFICER_PARTICULAR_SCREEN_PATH = "/views/fxml/particular-info.fxml";
     public static final String OFFICER_PARTICULAR_STYLESHEET_PATH = "/views/css/particular-info.css";
+    public static final String OFFICER_HOME_SCREEN_PATH = "/views/fxml/officer-home.fxml";
+    public static final String OFFICER_HOME_STYLESHEET_PATH = "/views/css/officer-home.css";
 
-// ------- Database ----------
+
+    // ------- Database ----------
     public static final String DB_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
     public static final String DB_HOST_NAME = "localhost";
     public static final String DB_PORT = "3306";
