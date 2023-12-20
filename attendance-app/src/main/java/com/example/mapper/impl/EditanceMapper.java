@@ -25,7 +25,7 @@ public class EditanceMapper implements RowMapper<Editance> {
             editance.setTimeOut(LocalDateTime.parse(rs.getString("time_out"), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
             editance.setStatus(rs.getString("status"));
             editance.setName(rs.getString("name"));
-
+            editance.seteId(rs.getInt("employee_id"));
             return editance;
 
         } catch (SQLException e) {

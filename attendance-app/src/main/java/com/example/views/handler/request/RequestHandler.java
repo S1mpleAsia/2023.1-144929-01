@@ -59,9 +59,16 @@ public class RequestHandler extends BaseHandler implements Initializable {
     {
         if(mouseEvent.isPrimaryButtonDown() && mouseEvent.getClickCount() == 2){
             EditTableDTO selectedItem = table.getSelectionModel().getSelectedItem();
-            System.out.println(selectedItem.getId());
-            RequestContext.getContext().putItem("id", selectedItem.getId());
             RequestContext.getContext().putItem("name", selectedItem.getEmployeeName());
+
+            //For update
+            RequestContext.getContext().putItem("id", selectedItem.getId());
+            RequestContext.getContext().putItem("aId", selectedItem.getAttendanceId());
+            RequestContext.getContext().putItem("type", selectedItem.getType());
+
+
+
+            System.out.println(selectedItem.getType());
             if(selectedItem.getType().equals("Thêm")) {
                 displayView(Constraints.REQUEST_DETAIL_PATH, Constraints.REQUEST_DETAIL_STYLESHEET_PATH, mouseEvent);
             } else if (selectedItem.getType().equals("Sửa")) {

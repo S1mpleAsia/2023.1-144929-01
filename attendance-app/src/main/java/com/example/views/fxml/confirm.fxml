@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="336.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.request.ConfirmHandler">
@@ -15,20 +15,20 @@
             <Image url="@../images/check.png" />
          </image>
       </ImageView>
-      <TextField layoutX="70.0" layoutY="34.0" prefHeight="30.0" prefWidth="252.0" text="Xác nhận xử lý yêu cầu số 300003?">
+      <Button layoutX="20.0" layoutY="98.0" mnemonicParsing="false" onMousePressed="#handleQuit" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" text="Không, hủy bỏ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="188.0" layoutY="98.0" mnemonicParsing="false" onMousePressed="#handleConfirm" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #4F4F4F;" text="Đúng, xác nhận" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="textLabel" layoutX="79.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xác nhận xử lý yêu cầu số 300003?" wrappingWidth="248.1171875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
-      </TextField>
-      <Button layoutX="20.0" layoutY="98.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" text="Không, hủy bỏ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="188.0" layoutY="98.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #4F4F4F;" text="Đúng, xác nhận" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
+      </Text>
    </children>
 </AnchorPane>

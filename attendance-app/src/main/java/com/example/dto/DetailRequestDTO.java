@@ -14,17 +14,28 @@ public class DetailRequestDTO {
 
     private Integer id;
 
+    private Integer eId;
+
     public DetailRequestDTO(){
 
     }
 
-    public DetailRequestDTO(String createDay, String requestDay, String timeIn, String timeOut, String reason, Integer id) {
+    public DetailRequestDTO(Integer eId, String createDay, String requestDay, String timeIn, String timeOut, String reason, Integer id) {
         this.createDay = createDay;
         this.requestDay = requestDay;
         this.timeIn = timeIn;
         this.timeOut = timeOut;
         this.reason = reason;
         this.id = id;
+        this.eId = eId;
+    }
+
+    public Integer geteId() {
+        return eId;
+    }
+
+    public void seteId(Integer eId) {
+        this.eId = eId;
     }
 
     public String getReason() {

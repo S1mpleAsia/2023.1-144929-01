@@ -14,9 +14,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import subsystem.database.impl.EditanceRepository;
 import usecase.request.impl.DetailRequestController;
+import utils.Constraints;
 import utils.store.RequestContext;
 import views.handler.BaseHandler;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -66,19 +68,21 @@ public class DetailHandler extends BaseHandler implements Initializable {
                 timeOut.setCellValueFactory(new PropertyValueFactory<>("timeOut"));
                 timeIn.setCellValueFactory(new PropertyValueFactory<>("timeIn"));
                 reason.setCellValueFactory(new PropertyValueFactory<>("reason"));
-                requestLabel.setText( "Chi tiết yêu câu chỉnh sửa số " + (id+100000));
+                requestLabel.setText( "Chi tiết yêu cầu chỉnh sửa số " + (id+100000));
                 nameLabel.setText("Nhân viên " + name);
                 tableView.setItems(tableData);
         }
 
         @FXML
-        void handleConfirm(ActionEvent event) {
-
+        void handleConfirm(ActionEvent event)throws IOException {
+                RequestContext.getContext().putItem("action", 1);
+                displayView(Constraints.CONFIRM_PATH, Constraints.REQUEST_DETAIL_STYLESHEET_PATH, event);
         }
 
         @FXML
-        void handleRefuse(ActionEvent event) {
-
+        void handleRefuse(ActionEvent event) throws IOException{
+                RequestContext.getContext().putItem("action", 0);
+                displayView(Constraints.CONFIRM_PATH, Constraints.REQUEST_DETAIL_STYLESHEET_PATH, event);
         }
 
 

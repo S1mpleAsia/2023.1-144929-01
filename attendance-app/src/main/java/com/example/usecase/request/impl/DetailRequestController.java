@@ -3,12 +3,13 @@ package usecase.request.impl;
 import dto.DetailRequestDTO;
 import model.Editance;
 import subsystem.database.IEditanceRepository;
-import usecase.request.IDetailRequest;
+import usecase.request.IDetailRequestController;
+import utils.store.RequestContext;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class DetailRequestController implements IDetailRequest {
+public class DetailRequestController implements IDetailRequestController {
     private final IEditanceRepository editanceRepository;
 
     public DetailRequestController(IEditanceRepository editanceRepository){
@@ -29,12 +30,17 @@ public class DetailRequestController implements IDetailRequest {
         if(detailRequest != null){
             DateTimeFormatter formatDay = DateTimeFormatter.ofPattern("dd-MM-yyyy");
             DateTimeFormatter formatHour = DateTimeFormatter.ofPattern("HH:mm");
+            RequestContext.getContext().putItem("timeIn", detailRequest.getTimeIn());
+            RequestContext.getContext().putItem("timeOut", detailRequest.getTimeOut());
+            RequestContext.getContext().putItem("eId", detailRequest.geteId());
             tableData.setReason(detailRequest.getReason());
             tableData.setCreateDay(detailRequest.getCreateDay().format(formatDay));
             tableData.setId(detailRequest.getId());
             tableData.setRequestDay(detailRequest.getTimeIn().format(formatDay));
             tableData.setTimeIn(detailRequest.getTimeIn().format(formatHour));
             tableData.setTimeOut(detailRequest.getTimeOut().format(formatHour));
+
+            tableData.seteId(detailRequest.geteId());
             return tableData;
         }
         return null;

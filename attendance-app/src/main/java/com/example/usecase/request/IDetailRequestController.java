@@ -2,7 +2,7 @@ package usecase.request;
 
 import dto.DetailRequestDTO;
 
-public interface IDetailRequest {
+public interface IDetailRequestController {
     DetailRequestDTO getTableData(Integer id);
 
 }

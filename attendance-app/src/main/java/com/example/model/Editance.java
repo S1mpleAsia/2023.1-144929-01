@@ -24,10 +24,22 @@ public class Editance {
 
     private String name;
 
+
+    // id của data trong bảng employee khác với employeeId
+    private Integer eId;
+
+    public Integer geteId() {
+        return eId;
+    }
+
+    public void seteId(Integer eId) {
+        this.eId = eId;
+    }
+
     public Editance(){}
 
     public Editance(Integer id, Integer attendanceId,String employeeId,
-             LocalDateTime createDay, String typeRequest, String reason,
+             LocalDateTime createDay, String typeRequest, String reason, Integer eId,
              LocalDateTime timeIn, LocalDateTime timeOut, String status, String name){
         this.id = id;
         this.attendanceId = attendanceId;
@@ -39,6 +51,7 @@ public class Editance {
         this.timeOut = timeOut;
         this.status = status;
         this.name = name;
+        this.eId = eId;
     }
 
     public String getName() {

@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS attendance(
     time_out TIMESTAMP NULL,
 );
 
-CREATE TABLE IF NOT EXISTS editance(
+CREATE TABLE IF NOT EXISTS request(
     id INT PRIMARY KEY AUTO_INCREMENT,
     attendance_id INT,
     employee_id VARCHAR(20),
@@ -93,7 +93,7 @@ VALUES  (1, '2023-12-14 10:00:00', '2023-12-14 7:30:00'),
         (2, '2023-12-15 08:20:00', '2023-12-15 17:30:00'),
         (2, '2023-12-16 08:50:00', '2023-12-16 17:30:00');
 
-INSERT INTO editance(attendance_id, employee_id, create_day, type_request, reason, time_in, time_out, status)
+INSERT INTO request(attendance_id, employee_id, create_day, type_request, reason, time_in, time_out, status)
 VALUES (1, 1, '2023-12-20', 'ADD', 'Chú bé Dương Vũ vô tình làm hỏng máy chấm công','2023-12-14 08:00:00', '2023-12-16 17:30:00', 'PENDING'),
        (2, 1, '2023-12-20', 'EDIT', 'Chú bé Vuz vô tình làm hỏng máy chấm công','2023-12-15 08:00:00', '2023-12-15 17:30:00', 'PENDING'),
        (3, 1, '2023-12-20', 'DELETE', 'Chú bé SNAPE chấm công nhầm của e','2023-12-16 08:00:00', '2023-12-16 17:30:00', 'PENDING'),

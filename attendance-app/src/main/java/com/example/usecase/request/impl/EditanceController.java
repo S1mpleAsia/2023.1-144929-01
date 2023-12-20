@@ -32,6 +32,7 @@ public class EditanceController implements IEditanceController {
         editanceList.forEach(editance -> {
             EditTableDTO tableDataDTO = new EditTableDTO();
             tableDataDTO.setId(editance.getId());
+            tableDataDTO.setAttendanceId(editance.getAttendanceId());
             tableDataDTO.setEmployeeName(editance.getName());
             tableDataDTO.setType(Type(editance.getTypeRequest()));
             tableDataDTO.setRequestDay(editance.getTimeIn().format(formatDay));

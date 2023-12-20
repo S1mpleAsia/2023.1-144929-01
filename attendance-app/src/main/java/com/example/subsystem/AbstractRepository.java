@@ -106,6 +106,29 @@ public class AbstractRepository<T> implements GenericRepository<T> {
 
     @Override
     public void update(String sql, Object... params) {
-        
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+            /* Get connection to DB */
+            connection = getConnection();
+            assert connection != null;
+
+            /* Set parameters */
+            statement = connection.prepareStatement(sql);
+            setParameter(statement, params);
+
+            /* Execute update query */
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null) connection.close();
+                if (statement != null) statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

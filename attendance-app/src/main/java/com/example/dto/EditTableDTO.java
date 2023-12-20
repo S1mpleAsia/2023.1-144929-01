@@ -5,6 +5,8 @@ public class EditTableDTO {
 
     private Integer id;
 
+    private Integer attendanceId;
+
     public Integer getId() {
         return id;
     }
@@ -27,13 +29,22 @@ public class EditTableDTO {
 
     }
 
-    public EditTableDTO(Integer id, String employeeId, String employeeName, String requestDay, String createDay, String type){
+    public Integer getAttendanceId() {
+        return attendanceId;
+    }
+
+    public void setAttendanceId(Integer attendanceId) {
+        this.attendanceId = attendanceId;
+    }
+
+    public EditTableDTO(Integer id, Integer attendanceId, String employeeId, String employeeName, String requestDay, String createDay, String type){
         this.createDay = createDay;
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.requestDay = requestDay;
         this.type = type;
         this.id = id;
+        this.attendanceId = attendanceId;
     }
 
     public String getEmployeeId() {

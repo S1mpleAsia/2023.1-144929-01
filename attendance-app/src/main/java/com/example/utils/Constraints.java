@@ -21,6 +21,8 @@ public class Constraints {
     public static final String REQUEST_EDIT_PATH = "/views/fxml/detail-edit-request.fxml";
     public static final String REQUEST_DELETE_PATH = "/views/fxml/detail-delete-request.fxml";
 
+    public static final String CONFIRM_PATH = "/views/fxml/confirm.fxml";
+
 // ------- Database ----------
     /* Le Cuong */
     public static final String DB_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
