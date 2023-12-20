@@ -17,6 +17,7 @@ public class Constraints {
     public static final String OFFICER_PARTICULAR_STYLESHEET_PATH = "/views/css/particular-info.css";
     public static final String OFFICER_HOME_SCREEN_PATH = "/views/fxml/officer-home.fxml";
     public static final String OFFICER_HOME_STYLESHEET_PATH = "/views/css/officer-home.css";
+    public static final String OFFICER_MONTHLY_TABLE_SCREEN_PATH ="/views/fxml/officer-personal-monthly-attendance.fxml";
 
 
     // ------- Database ----------

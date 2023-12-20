@@ -1,8 +1,9 @@
 package usecase.officer_home;
 
 import dto.EmployeeDTO;
+import dto.TableDataDTO;
 import model.Employee;
 
 public interface IOfficerHomeController {
-    EmployeeDTO getOfficerInfoById(Integer id);
+    TableDataDTO getOfficerInfoById(Integer id);
 }
