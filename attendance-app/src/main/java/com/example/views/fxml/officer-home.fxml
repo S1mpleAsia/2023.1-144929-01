@@ -71,6 +71,20 @@
                         </Label>
                     </children>
                 </AnchorPane>
+            <AnchorPane layoutX="3.0" layoutY="565.0" prefHeight="70.0" prefWidth="222.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="24.0" layoutX="14.0" layoutY="21.0" onMousePressed="#logout" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
+                     <image>
+                        <Image url="@../images/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="10.0" prefHeight="50.0" prefWidth="124.0" text="Logout" AnchorPane.leftAnchor="66.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
         <Separator layoutX="230.0" layoutY="70.0" orientation="VERTICAL" prefHeight="637.0" prefWidth="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="70.0" />

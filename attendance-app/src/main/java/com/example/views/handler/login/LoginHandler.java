@@ -67,4 +67,5 @@ public class LoginHandler extends BaseHandler implements Initializable {
             navigate(Constraints.OFFICER_HOME_SCREEN_PATH, Constraints.OFFICER_HOME_STYLESHEET_PATH, actionEvent);
         }
     }
+
 }

@@ -2,6 +2,7 @@ package views.handler.officer_home;
 
 import dto.EmployeeDTO;
 import dto.TableDataDTO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
@@ -70,5 +71,15 @@ public class OfficerHomeHandler extends BaseHandler implements Initializable {
         ContextFactory.getContext().putItem("employeeInfo", tableDataDTO);
 
         changeContentView(Constraints.OFFICER_MONTHLY_TABLE_SCREEN_PATH, content);
+    }
+
+    @FXML
+    private void logout(ActionEvent actionEvent) throws IOException {
+        clearSession(); // Clear user session data
+        navigate(Constraints.LOGIN_SCREEN_PATH, Constraints.LOGIN_STYLESHEET_PATH, actionEvent);
+    }
+
+    private void clearSession() {
+        ContextFactory.getContext().emptyState();
     }
 }
