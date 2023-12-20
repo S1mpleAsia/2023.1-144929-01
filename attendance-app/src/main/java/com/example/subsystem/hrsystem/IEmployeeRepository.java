@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface IEmployeeRepository extends GenericRepository<Employee> {
     List<Employee> findAllByDepartmentId(Integer departmentId);
+    Employee getEmployeeInfoById(Integer id);
 }
