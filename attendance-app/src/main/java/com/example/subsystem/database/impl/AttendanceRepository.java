@@ -17,7 +17,7 @@ public class AttendanceRepository extends AbstractRepository<Attendance> impleme
     public List<Attendance> allAttendance(){
         String sql = "SELECT attendance.id, attendance.time_in, attendance.time_out, employee.employee_id, employee.name, department.department_name " +
                 "FROM attendance INNER JOIN employee ON attendance.employee_id = employee.id " +
-                "INNER JOIN department ON employee.department_id = department.id";
+                "INNER JOIN department ON employee.department_id = department.id ORDER BY attendance.time_in";
         List<Attendance> attendanceList = query(sql, AttendanceMapper.getInstance());
         return attendanceList.isEmpty() ? null : attendanceList;
     }

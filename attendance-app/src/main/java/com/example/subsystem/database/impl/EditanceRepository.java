@@ -16,11 +16,10 @@ public class EditanceRepository extends AbstractRepository<Editance> implements 
     }
 
     @Override
-    public List<Editance> allEditance(String status){
+    public List<Editance> allEditance(){
         String sql = "SELECT request.*, employee.name, employee.employee_id as employeeId " +
-                "FROM request INNER JOIN employee ON request.employee_id= employee.id " +
-                "WHERE request.status = ?" ;
-        List<Editance> editanceList = query(sql, EditanceMapper.getInstance(), status);
+                "FROM request INNER JOIN employee ON request.employee_id= employee.id ORDER BY request.time_in; ";
+        List<Editance> editanceList = query(sql, EditanceMapper.getInstance());
         return editanceList.isEmpty() ? null : editanceList;
     }
 

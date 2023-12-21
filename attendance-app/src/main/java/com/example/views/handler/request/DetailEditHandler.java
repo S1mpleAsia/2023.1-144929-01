@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -15,6 +16,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import subsystem.database.impl.EditanceRepository;
 import usecase.request.impl.DetailRequestController;
 import utils.Constraints;
+import utils.store.ContextFactory;
 import utils.store.RequestContext;
 import views.handler.BaseHandler;
 
@@ -76,12 +78,14 @@ public class DetailEditHandler extends BaseHandler implements Initializable {
     @FXML
     void handleConfirm(ActionEvent event) throws IOException {
         RequestContext.getContext().putItem("action", 1);
+        ContextFactory.getContext().putItem("primaryScene", ((Node) event.getSource()).getScene().getWindow());
         displayView(Constraints.CONFIRM_PATH, Constraints.REQUEST_DETAIL_STYLESHEET_PATH, event);
     }
 
     @FXML
     void handleRefuse(ActionEvent event) throws IOException{
         RequestContext.getContext().putItem("action", 0);
+        ContextFactory.getContext().putItem("primaryScene", ((Node) event.getSource()).getScene().getWindow());
         displayView(Constraints.CONFIRM_PATH, Constraints.REQUEST_DETAIL_STYLESHEET_PATH, event);
     }
 

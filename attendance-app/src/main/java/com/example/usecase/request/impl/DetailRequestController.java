@@ -19,7 +19,7 @@ public class DetailRequestController implements IDetailRequestController {
     @Override
     public DetailRequestDTO getTableData(Integer id){
         DetailRequestDTO tableData = new DetailRequestDTO();
-        List<Editance> Request = editanceRepository.allEditance("PENDING");
+        List<Editance> Request = editanceRepository.allEditance();
         Editance detailRequest = null;
         for (Editance editance : Request) {
             if (editance.getId() == id) {
@@ -36,7 +36,7 @@ public class DetailRequestController implements IDetailRequestController {
             tableData.setReason(detailRequest.getReason());
             tableData.setCreateDay(detailRequest.getCreateDay().format(formatDay));
             tableData.setId(detailRequest.getId());
-            tableData.setRequestDay(detailRequest.getTimeIn().format(formatDay));
+            tableData.setRequestDay(detailRequest.getTimeOut().format(formatDay));
             tableData.setTimeIn(detailRequest.getTimeIn().format(formatHour));
             tableData.setTimeOut(detailRequest.getTimeOut().format(formatHour));
 

@@ -24,8 +24,6 @@ public class Editance {
 
     private String name;
 
-
-    // id của data trong bảng employee khác với employeeId
     private Integer eId;
 
     public Integer geteId() {

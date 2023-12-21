@@ -25,6 +25,8 @@ public class EditTableDTO {
 
     private String type;
 
+    private String status;
+
     public EditTableDTO(){
 
     }
@@ -37,7 +39,7 @@ public class EditTableDTO {
         this.attendanceId = attendanceId;
     }
 
-    public EditTableDTO(Integer id, Integer attendanceId, String employeeId, String employeeName, String requestDay, String createDay, String type){
+    public EditTableDTO(String status ,Integer id, Integer attendanceId, String employeeId, String employeeName, String requestDay, String createDay, String type){
         this.createDay = createDay;
         this.employeeId = employeeId;
         this.employeeName = employeeName;
@@ -45,6 +47,15 @@ public class EditTableDTO {
         this.type = type;
         this.id = id;
         this.attendanceId = attendanceId;
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getEmployeeId() {

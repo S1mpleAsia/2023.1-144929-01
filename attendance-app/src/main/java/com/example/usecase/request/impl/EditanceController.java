@@ -24,10 +24,16 @@ public class EditanceController implements IEditanceController {
         return "Xóa";
     }
 
+    private String Status (String status) {
+        if(status.equals("PENDING")) return "Chờ xử lý";
+        if(status.equals("DONE")) return "Chấp nhận";
+        return "Từ chối";
+    }
+
     @Override
     public List<EditTableDTO> getTableData() {
         List<EditTableDTO> tableData = new ArrayList<>(Collections.emptyList());
-        List<Editance> editanceList = editanceRepository.allEditance("PENDING");
+        List<Editance> editanceList = editanceRepository.allEditance();
         DateTimeFormatter formatDay = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         editanceList.forEach(editance -> {
             EditTableDTO tableDataDTO = new EditTableDTO();
@@ -35,9 +41,10 @@ public class EditanceController implements IEditanceController {
             tableDataDTO.setAttendanceId(editance.getAttendanceId());
             tableDataDTO.setEmployeeName(editance.getName());
             tableDataDTO.setType(Type(editance.getTypeRequest()));
-            tableDataDTO.setRequestDay(editance.getTimeIn().format(formatDay));
+            tableDataDTO.setRequestDay(editance.getTimeOut().format(formatDay));
             tableDataDTO.setEmployeeId(editance.getEmployeeId());
             tableDataDTO.setCreateDay(editance.getCreateDay().format(formatDay));
+            tableDataDTO.setStatus(Status(editance.getStatus()));
             tableData.add(tableDataDTO);
         });
         return tableData;

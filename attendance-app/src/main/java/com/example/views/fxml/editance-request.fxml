@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.request.RequestHandler">
+<AnchorPane fx:id="anchorpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.handler.request.RequestHandler">
     <children>
         <Label layoutX="55.0" layoutY="27.0" text="Danh sách yêu cầu">
             <font>
@@ -27,13 +27,14 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </TextField>
-        <TableView fx:id="table" onMousePressed="#handleViewOverView" layoutX="61.0" layoutY="126.0" prefHeight="449.0" prefWidth="798.0" style="-fx-background-color: #FFFFFF;" >
+        <TableView fx:id="table" layoutX="61.0" layoutY="126.0" onMousePressed="#handleViewOverView" prefHeight="449.0" prefWidth="798.0" style="-fx-background-color: #FFFFFF;">
             <columns>
-                <TableColumn fx:id="id" prefWidth="140.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Mã nhân viên" />
-                <TableColumn fx:id="name" prefWidth="170.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Họ và tên" />
-                <TableColumn fx:id="request_day" prefWidth="180.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Ngày yêu cầu chỉnh sửa" />
-                <TableColumn fx:id="create_day" prefWidth="180.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Ngày tạo yêu cầu" />
-                <TableColumn fx:id="type" prefWidth="127.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Loại yêu cầu" />
+                <TableColumn fx:id="id" prefWidth="112.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Mã nhân viên" />
+                <TableColumn fx:id="name" prefWidth="136.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Họ và tên" />
+                <TableColumn fx:id="request_day" prefWidth="146.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Ngày yêu cầu " />
+                <TableColumn fx:id="create_day" prefWidth="152.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Ngày tạo yêu cầu" />
+                <TableColumn fx:id="type" prefWidth="108.0" style="-fx-alignment: center;-fx-background-color: transparent" text="Loại yêu cầu" />
+                <TableColumn fx:id="status" prefWidth="142.0" style="-fx-alignment: center; -fx-background-color: transparent;" text="Trạng thái" />
             </columns>
         </TableView>
         <TextField id="search" layoutX="671.0" layoutY="65.0" prefHeight="34.0" prefWidth="188.0" promptText="Tìm kiếm" style="-: 1; -fx-background-radius: 50px;" AnchorPane.leftAnchor="671.0">

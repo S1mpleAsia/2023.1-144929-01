@@ -62,7 +62,6 @@ public class HomeHandler extends BaseHandler implements Initializable {
     private TableView<TableDataDTO> table;
 
     @FXML
-
     private IHomeController homeController;
 
     private final ObservableList<TableDataDTO> tableData = FXCollections.observableArrayList();
@@ -73,15 +72,12 @@ public class HomeHandler extends BaseHandler implements Initializable {
         homeController = new HomeController(AttendanceRepository.getInstance());
         tableData.clear();
         tableData.addAll(homeController.getTableData(1));
-
         id.setCellValueFactory(new PropertyValueFactory<>("employeeId"));
         name.setCellValueFactory(new PropertyValueFactory<>("employeeName"));
         deparment.setCellValueFactory(new PropertyValueFactory<>("departmentName"));
         timein.setCellValueFactory(new PropertyValueFactory<>("timeIn"));
         timeout.setCellValueFactory(new PropertyValueFactory<>("timeOut"));
         date.setCellValueFactory(new PropertyValueFactory<>("Date"));;
-
-
         table.setItems(tableData);
         initNavbarList();
     }
@@ -111,6 +107,9 @@ public class HomeHandler extends BaseHandler implements Initializable {
         changeContentView(Constraints.LIST_EDITANCE_REQUEST_PATH, content);
     }
 
+    public void handleRequest(AnchorPane anchorPane){
+        changeContentView(Constraints.LIST_EDITANCE_REQUEST_PATH, anchorPane);
+    }
     @FXML
     void handleBackScreen(MouseEvent event) throws IOException {
         navigate(Constraints.HOME_SCREEN_PATH, Constraints.HOME_STYLESHEET_PATH, event);

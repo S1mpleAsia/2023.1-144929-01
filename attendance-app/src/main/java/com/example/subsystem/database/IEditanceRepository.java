@@ -5,6 +5,6 @@ import subsystem.GenericRepository;
 import java.util.List;
 
 public interface IEditanceRepository extends GenericRepository<Editance> {
-    List<Editance> allEditance(String status);
+    List<Editance> allEditance();
 
 }
