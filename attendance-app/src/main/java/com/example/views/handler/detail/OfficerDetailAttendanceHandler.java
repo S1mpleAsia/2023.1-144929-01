@@ -8,7 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import subsystem.timekeepingmachine.impl.RecordRepository;
 import usecase.detail.IDetailController;
-import usecase.detail.impl.OfficerDetailController;
+import usecase.detail.impl.OfficerAttendController;
 import utils.Constraints;
 import utils.EmployeeType;
 import utils.store.ContextFactory;
@@ -56,7 +56,7 @@ public class OfficerDetailAttendanceHandler extends BaseHandler implements Initi
         TableDataDTO employeeInfo = (TableDataDTO) ContextFactory.getContext().getItem("employeeInfo");
         String observerDate = ((LocalDate) ContextFactory.getContext().getItem("date")).toString();
 
-        IDetailController<OfficerDataByDayDTO> monthlyAttendanceController = new OfficerDetailController(RecordRepository.getInstance());
+        IDetailController<OfficerDataByDayDTO> monthlyAttendanceController = new OfficerAttendController(RecordRepository.getInstance());
         OfficerDataByDayDTO officerDataByDay = monthlyAttendanceController.getDataByDay(employeeInfo.getEmployeeId(), observerDate);
         ContextFactory.getContext().putItem("employeeDataByDay", officerDataByDay);
 

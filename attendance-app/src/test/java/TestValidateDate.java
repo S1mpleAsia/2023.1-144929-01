@@ -2,13 +2,13 @@ import dto.WorkerDataByDayDTO;
 import org.junit.Assert;
 import org.junit.Test;
 import subsystem.timekeepingmachine.impl.RecordRepository;
-import usecase.detail.BaseDetailController;
-import usecase.detail.impl.WorkerDetailController;
+import usecase.detail.BaseAttendController;
+import usecase.detail.impl.WorkerAttendController;
 
 import java.time.LocalDate;
 
 public class TestValidateDate {
-    private final BaseDetailController<WorkerDataByDayDTO> workerDetailController = new WorkerDetailController(RecordRepository.getInstance());
+    private final BaseAttendController<WorkerDataByDayDTO> workerDetailController = new WorkerAttendController(RecordRepository.getInstance());
     @Test
     public void TC1() {
         String date = "2023-01-01";

@@ -2,13 +2,13 @@ package usecase.detail.impl;
 
 import dto.WorkerDataByDayDTO;
 import subsystem.timekeepingmachine.IRecordRepository;
-import usecase.detail.BaseDetailController;
+import usecase.detail.BaseAttendController;
 import utils.Constraints;
 
 import java.time.LocalDate;
 
-public class WorkerDetailController extends BaseDetailController<WorkerDataByDayDTO> {
-    public WorkerDetailController(IRecordRepository recordRepository) {
+public class WorkerAttendController extends BaseAttendController<WorkerDataByDayDTO> {
+    public WorkerAttendController(IRecordRepository recordRepository) {
         super(recordRepository);
     }
 

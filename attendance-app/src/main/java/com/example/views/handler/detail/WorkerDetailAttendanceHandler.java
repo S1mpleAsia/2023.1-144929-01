@@ -6,7 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import subsystem.timekeepingmachine.impl.RecordRepository;
 import usecase.detail.IDetailController;
-import usecase.detail.impl.WorkerDetailController;
+import usecase.detail.impl.WorkerAttendController;
 import dto.WorkerDataByDayDTO;
 import dto.TableDataDTO;
 import utils.Constraints;
@@ -47,7 +47,7 @@ public class WorkerDetailAttendanceHandler extends BaseHandler implements Initia
         TableDataDTO employeeInfo = (TableDataDTO) ContextFactory.getContext().getItem("employeeInfo");
         String observerDate = ((LocalDate) ContextFactory.getContext().getItem("date")).toString();
 
-        IDetailController<WorkerDataByDayDTO> monthlyAttendanceController = new WorkerDetailController(RecordRepository.getInstance());
+        IDetailController<WorkerDataByDayDTO> monthlyAttendanceController = new WorkerAttendController(RecordRepository.getInstance());
         WorkerDataByDayDTO workerDataByDay = monthlyAttendanceController.getDataByDay(employeeInfo.getEmployeeId(), observerDate);
         ContextFactory.getContext().putItem("employeeDataByDay", workerDataByDay);
 

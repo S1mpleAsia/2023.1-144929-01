@@ -12,6 +12,40 @@
     -fx-cursor: hand;
 }
 
+.table-header {
+    -fx-background-color: #6c7ae0;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+}
+
+.base-column {
+    -fx-cursor: hand;
+}
+
+.base-column:hover > .base-label {
+    -fx-background-color: #ffebed;
+    -fx-text-fill: #fa4251;
+}
+
 .column-active {
-    -fx-background-color: red;
+    -fx-background-color: #fa4251;
+}
+
+.column-active > .base-label {
+    -fx-text-fill: #fff;
+}
+
+.column-active:hover > .base-label {
+    -fx-background-color: #fa4251;
+    -fx-text-fill: #fff;
+}
+
+#export-btn {
+    -fx-background-color: #fff;
+    -fx-text-fill: #ef3870;
+    -fx-font-weight: bold;
+    -fx-border-color: #ef3870;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-cursor: hand;
 }
