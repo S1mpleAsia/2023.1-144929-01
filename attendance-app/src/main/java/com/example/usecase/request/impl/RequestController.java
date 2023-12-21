@@ -20,14 +20,14 @@ public class RequestController implements IRequestController {
     public OfficerDataByDayDTO getOfficerDataByDay(Integer employee_id, String day) {
         Attendance attendance = attendanceRepository.getOfficerDataByIdAndDay(employee_id, day);
         OfficerDataByDayDTO officerDataByDayDTO = new OfficerDataByDayDTO();
-        officerDataByDayDTO.setTime_in(attendance.getTime_in());
-        officerDataByDayDTO.setTime_out(attendance.getTime_out());
-        officerDataByDayDTO.setAttendance_id(attendance.getId());
+        officerDataByDayDTO.SetTimeIn(attendance.GetTimeIn());
+        officerDataByDayDTO.SetTimeOut(attendance.GetTimeOut());
+        officerDataByDayDTO.SetAttendanceId(attendance.getId());
         return officerDataByDayDTO;
     }
 
     @Override
-    public Long createNewRequest(RequestDTO requestDTO) {
+    public Long createNewRequest(RequestAttendanceDTO requestDTO) {
         Long result = requestRepository.createNewRequest(requestDTO);
         return result;
     }

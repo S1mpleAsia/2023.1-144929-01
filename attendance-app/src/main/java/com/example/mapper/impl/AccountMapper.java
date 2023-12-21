@@ -14,11 +14,11 @@ public class AccountMapper implements RowMapper<Account> {
         Account account = new Account();
 
         try {
-            account.setId(rs.getInt("id"));
+            account.set_id(rs.getInt("id"));
             account.setUsername(rs.getString("username"));
             account.setPassword(rs.getString("password"));
             account.setRole(rs.getString("role"));
-            account.setEmployeeId(rs.getInt("employee_id"));
+            account.SetEmployeeId(rs.getInt("employee_id"));
 
             return account;
         } catch (SQLException e) {

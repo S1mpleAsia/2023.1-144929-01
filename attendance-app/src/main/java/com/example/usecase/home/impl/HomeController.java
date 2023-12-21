@@ -36,7 +36,7 @@ public class HomeController implements IHomeController {
             tableDataDTO.setDepartmentName(department.getDepartmentName());
             tableDataDTO.setGender(employee.getGender());
             tableDataDTO.setAge(employee.getAge());
-            tableDataDTO.setEmployeeId(employee.getEmployeeId());
+            tableDataDTO.SetEmployeeId(employee.getEmployeeId());
             tableDataDTO.setEmployeeName(employee.getName());
             tableDataDTO.setEmployeeType(employee.getType());
 

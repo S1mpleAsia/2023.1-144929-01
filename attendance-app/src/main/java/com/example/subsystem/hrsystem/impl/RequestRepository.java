@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 
-public class RequestRepository extends AbstractRepository<Request> implements IRequestRepository {
+public class RequestRepository extends AbstractRepository<RequestAttendance> implements IRequestRepository {
     private static RequestRepository requestRepository = null;
     public static RequestRepository getInstance() {
         if (requestRepository == null) {
@@ -20,15 +20,15 @@ public class RequestRepository extends AbstractRepository<Request> implements IR
     }
 
     @Override
-    public Long createNewRequest(RequestDTO request) {
+    public Long createNewRequest(RequestAttendanceDTO request) {
         String sql = "INSERT INTO `request`(`attendance_id`, `employee_id`, `create_day`, `type_request`, `reason`, `time_in`, `time_out`) VALUES (?,?,?,?,?,?,?)";
         return insert(sql,
-                request.getAttendance_id(),
-                request.getEmployee_id(),
+                request.GetAttendanceId(),
+                request.GetEmployeeId(),
                 LocalDate.now().toString(),
-                request.getType_request(),
-                request.getReason(),
-                request.getTime_in(),
-                request.getTime_out());
+                request.GetRequestType(),
+                request.GetReason(),
+                request.GetTimeIn(),
+                request.GetTimeOut());
     }
 }

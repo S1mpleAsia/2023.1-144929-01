@@ -22,7 +22,7 @@ public class OfficerHomeController implements IOfficerHomeController {
         Department department = departmentRepository.findByDepartmentId(employee.getDepartmentId());
 
         tableDataDTO.setEmployeeName(employee.getName());
-        tableDataDTO.setEmployeeId(employee.getEmployeeId());
+        tableDataDTO.SetEmployeeId(employee.getEmployeeId());
         tableDataDTO.setDepartmentName(department.getDepartmentName());
         tableDataDTO.setEmployeeType(employee.getType());
         tableDataDTO.setAge(employee.getAge());

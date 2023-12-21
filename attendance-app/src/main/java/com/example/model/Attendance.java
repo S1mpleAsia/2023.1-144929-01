@@ -18,11 +18,11 @@ public class Attendance {
 
     }
 
-    public Integer getEmployee_id() {
+    public Integer GetEmployeeId() {
         return employee_id;
     }
 
-    public void setEmployee_id(Integer employee_id) {
+    public void SetEmployeeId(Integer employee_id) {
         this.employee_id = employee_id;
     }
 

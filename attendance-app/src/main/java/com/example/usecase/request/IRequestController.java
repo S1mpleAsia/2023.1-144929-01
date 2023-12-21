@@ -5,6 +5,6 @@ import dto.RequestDTO;
 
 public interface IRequestController {
     OfficerDataByDayDTO getOfficerDataByDay(Integer employee_id, String day);
-    Long createNewRequest(RequestDTO requestDTO);
+    Long createNewRequest(RequestAttendanceDTO requestDTO);
 
 }

@@ -56,26 +56,26 @@ public class RequestHandler extends BaseHandler implements Initializable {
         ContextFactory.getContext().putItem("employeeDataByDay", officerDataByDay);
         RequestController requestController = new RequestController(AttendanceRepository.getInstance(), RequestRepository.getInstance());
         OfficerDataByDayDTO officerDataByDayDTO = requestController.getOfficerDataByDay(employeeId, observerDate);
-        ContextFactory.getContext().putItem("attendance_id", officerDataByDayDTO.getAttendance_id());
+        ContextFactory.getContext().putItem("attendance_id", officerDataByDayDTO.GetAttendanceId());
         System.out.println(officerDataByDayDTO);
-        checkin.setText(officerDataByDayDTO.getTime_in());
-        checkout.setText(officerDataByDayDTO.getTime_out());
+        checkin.setText(officerDataByDayDTO.GetTimeIn());
+        checkout.setText(officerDataByDayDTO.GetTimeOut());
         employeeName.setText(employeeInfo.getEmployeeName());
         date.setValue(LocalDate.parse(observerDate));
     }
     @FXML
     public void createNewRequest(){
-        RequestDTO requestDTO = new RequestDTO();
+        RequestAttendanceDTO requestDTO = new RequestAttendanceDTO();
 
         Integer employeeId = (Integer) ContextFactory.getContext().getItem("userEmployeeId");
 
-        requestDTO.setEmployee_id(employeeId);
-        requestDTO.setType_request(requestType.getValue());
-        requestDTO.setReason(reason.getText());
-        requestDTO.setTime_in(checkin.getText());
-        requestDTO.setTime_out(checkout.getText());
-        requestDTO.setCreate_day(LocalDate.now().toString());
-        requestDTO.setAttendance_id((Integer)ContextFactory.getContext().getItem("attendance_id"));
+        requestDTO.SetEmployeeId(employeeId);
+        requestDTO.SetRequestType(requestType.getValue());
+        requestDTO.SetReason(reason.getText());
+        requestDTO.SetTimeIn(checkin.getText());
+        requestDTO.SetTimeOut(checkout.getText());
+        requestDTO.SetCreateDay(LocalDate.now().toString());
+        requestDTO.SetAttendanceId((Integer)ContextFactory.getContext().getItem("attendance_id"));
 
 
 

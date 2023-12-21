@@ -16,8 +16,8 @@ public class RecordMapper implements RowMapper<Record> {
         Record record = new Record();
 
         try {
-            record.setId(rs.getInt("id"));
-            record.setEmployeeId(rs.getString("employee_id"));
+            record.set_id(rs.getInt("id"));
+            record.SetEmployeeId(rs.getString("employee_id"));
             record.setCheckTime(LocalDateTime.parse(rs.getString("check_time"), DateTimeFormatter.ofPattern("yyyy-M-dd HH:mm:ss")));
 
             return record;

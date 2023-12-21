@@ -7,18 +7,18 @@ import model.Request;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class RequestMapper implements RowMapper<Request> {
+public class RequestMapper implements RowMapper<RequestAttendance> {
     private static RequestMapper requestMapper = null;
     @Override
-    public Request mapRow(ResultSet rs) throws SQLException {
-        Request request = new Request();
+    public RequestAttendance mapRow(ResultSet rs) throws SQLException {
+        RequestAttendance request = new RequestAttendance();
 
         try {
-            request.setEmployee_id(rs.getInt("employee_id"));
-            request.setAttendance_id(rs.getInt("attendance_id"));
-            request.setCreate_day(rs.getString("create_day"));
-            request.setType_request(rs.getString("type_request"));
-            request.setReason(rs.getString("reason"));
+            request.SetEmployeeId(rs.getInt("employee_id"));
+            request.SetAttendanceId(rs.getInt("attendance_id"));
+            request.SetCreateDay(rs.getString("create_day"));
+            request.SetRequestType(rs.getString("type_request"));
+            request.SetReason(rs.getString("reason"));
 
             return request;
         } catch (SQLException e) {

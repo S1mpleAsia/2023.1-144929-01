@@ -5,6 +5,6 @@ import model.Department;
 import model.Request;
 import subsystem.GenericRepository;
 
-public interface IRequestRepository extends GenericRepository<Request> {
-    Long createNewRequest (RequestDTO request);
+public interface IRequestRepository extends GenericRepository<RequestAttendance> {
+    Long createNewRequest (RequestAttendanceDTO request);
 }

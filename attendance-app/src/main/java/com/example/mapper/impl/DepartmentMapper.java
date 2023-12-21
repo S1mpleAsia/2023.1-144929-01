@@ -14,7 +14,7 @@ public class DepartmentMapper implements RowMapper<Department> {
         Department department = new Department();
 
         try {
-            department.setId(rs.getInt("id"));
+            department.set_id(rs.getInt("id"));
             department.setManagerId(rs.getInt("manager_id"));
             department.setDepartmentName(rs.getString("department_name"));
 

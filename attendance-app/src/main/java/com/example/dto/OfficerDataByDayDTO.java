@@ -8,11 +8,11 @@ import java.util.List;
 public class OfficerDataByDayDTO extends EmployeeDataByDayDTO {
     private Integer attendance_id;
 
-    public Integer getAttendance_id() {
+    public Integer GetAttendanceId() {
         return attendance_id;
     }
 
-    public void setAttendance_id(Integer attendance_id) {
+    public void SetAttendanceId(Integer attendance_id) {
         this.attendance_id = attendance_id;
     }
 
@@ -26,19 +26,19 @@ public class OfficerDataByDayDTO extends EmployeeDataByDayDTO {
     private String time_in;
     private String time_out;
 
-    public String getTime_in() {
+    public String GetTimeIn() {
         return time_in;
     }
 
-    public void setTime_in(String time_in) {
+    public void SetTimeIn(String time_in) {
         this.time_in = time_in;
     }
 
-    public String getTime_out() {
+    public String GetTimeOut() {
         return time_out;
     }
 
-    public void setTime_out(String time_out) {
+    public void SetTimeOut(String time_out) {
         this.time_out = time_out;
     }
 
