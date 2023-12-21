@@ -2,9 +2,20 @@ package dto;
 
 import model.Record;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class OfficerDataByDayDTO extends EmployeeDataByDayDTO {
+    private Integer attendance_id;
+
+    public Integer getAttendance_id() {
+        return attendance_id;
+    }
+
+    public void setAttendance_id(Integer attendance_id) {
+        this.attendance_id = attendance_id;
+    }
+
     private Boolean morningShift;
     private Boolean afternoonShift;
     private Double morningTime;
@@ -12,10 +23,29 @@ public class OfficerDataByDayDTO extends EmployeeDataByDayDTO {
     private Double hourLate;
     private Double earlyLeave;
     private Double overtime;
+    private String time_in;
+    private String time_out;
 
-    public OfficerDataByDayDTO() {
+    public String getTime_in() {
+        return time_in;
     }
 
+    public void setTime_in(String time_in) {
+        this.time_in = time_in;
+    }
+
+    public String getTime_out() {
+        return time_out;
+    }
+
+    public void setTime_out(String time_out) {
+        this.time_out = time_out;
+    }
+
+
+    public OfficerDataByDayDTO(){
+
+    }
     public OfficerDataByDayDTO(List<Record> recordList) {
         super(recordList);
     }

@@ -109,7 +109,7 @@ public class AbstractRepository<T> implements GenericRepository<T> {
             rs = statement.getGeneratedKeys();
 
             if(rs.next()) {
-                id = rs.getLong("id");
+                id = rs.getLong(1);
             }
 
             connection.commit();
