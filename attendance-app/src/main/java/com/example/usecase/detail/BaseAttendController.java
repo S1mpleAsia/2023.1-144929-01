@@ -10,10 +10,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class BaseDetailController<T> implements IDetailController<T> {
+public abstract class BaseAttendController<T> implements IDetailController<T> {
     protected final IRecordRepository recordRepository;
 
-    public BaseDetailController(IRecordRepository recordRepository) {
+    public BaseAttendController(IRecordRepository recordRepository) {
         this.recordRepository = recordRepository;
     }
 

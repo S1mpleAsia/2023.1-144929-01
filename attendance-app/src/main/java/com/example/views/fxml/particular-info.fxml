@@ -18,7 +18,7 @@
       <TableView fx:id="tableView" layoutX="67.0" layoutY="130.0" prefHeight="243.0" prefWidth="535.0">
         <columns>
           <TableColumn fx:id="date" editable="false" prefWidth="192.79993438720703" sortable="false" text="Ngày chấm công" />
-            <TableColumn fx:id="checkTime" editable="false" prefWidth="342.4000549316406" sortable="false" text="Thời gian ghi nhận" />
+            <TableColumn fx:id="checkTime" editable="false" prefWidth="342.4000549316406" sortable="false" style="-fx-alignment: center;" text="Thời gian ghi nhận" />
         </columns>
       </TableView>
       <Label fx:id="nameLabel" layoutX="67.0" layoutY="74.0" text="Công nhân Nguyễn Văn A">
@@ -29,10 +29,13 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="522.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleConfirm" text="Xác nhận">
+      <Button layoutX="517.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="34.0" prefWidth="84.0" styleClass="submit-btn" text="Xác nhận">
          <padding>
             <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
          </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
       </Button>
    </children>
 </AnchorPane>

@@ -3,6 +3,7 @@ package views.handler.login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -42,7 +43,13 @@ public class LoginHandler extends BaseHandler implements Initializable {
     public void login(ActionEvent actionEvent) throws IOException {
         Account account = loginController.findByUsernameAndPassword(getUsername(username), getPassword(password));
 
-        if(account == null) throw new RuntimeException("User not found");
+        if (account == null) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Thông tin đăng nhập không chính xác");
+            alert.setHeaderText("Lỗi");
+            alert.showAndWait();
+            return;
+        }
 
         LOGGER.info("Login successfully");
 

@@ -3,14 +3,14 @@ package usecase.detail.impl;
 import dto.OfficerDataByDayDTO;
 import dto.TransformTime;
 import subsystem.timekeepingmachine.IRecordRepository;
-import usecase.detail.BaseDetailController;
+import usecase.detail.BaseAttendController;
 import utils.Constraints;
 import utils.Utils;
 
 import java.time.LocalDate;
 
-public class OfficerDetailController extends BaseDetailController<OfficerDataByDayDTO> {
-    public OfficerDetailController(IRecordRepository recordRepository) {
+public class OfficerAttendController extends BaseAttendController<OfficerDataByDayDTO> {
+    public OfficerAttendController(IRecordRepository recordRepository) {
         super(recordRepository);
     }
 

@@ -2,7 +2,6 @@ package views.handler.monthly;
 
 import dto.OfficerDataByDayDTO;
 import dto.TableDataDTO;
-import dto.WorkerDataByDayDTO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import subsystem.timekeepingmachine.impl.RecordRepository;
 import usecase.detail.IDetailController;
-import usecase.detail.impl.OfficerDetailController;
+import usecase.detail.impl.OfficerAttendController;
 import utils.Constraints;
 import utils.Utils;
 import utils.store.ContextFactory;
@@ -65,7 +64,7 @@ public class OfficerMonthlyAttendanceHandler extends MonthlyHandler implements I
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        officerDetailController = new OfficerDetailController(RecordRepository.getInstance());
+        officerDetailController = new OfficerAttendController(RecordRepository.getInstance());
 
         morningSessionLabel.setText("Sáng\n" + "(morningSession)");
         afternoonSessionLabel.setText("Chiều\n" + "(afternoonSession)");
@@ -82,6 +81,7 @@ public class OfficerMonthlyAttendanceHandler extends MonthlyHandler implements I
         datePicker.setValue(LocalDate.now());
         setTimeTableDate(datePicker.getValue(), rootTimeTable);
 
+        initHoverColumn();
         initWeekAttendTime(employeeInfo.getEmployeeId(), getListColumn(rootTimeTable));
     }
 
@@ -130,6 +130,26 @@ public class OfficerMonthlyAttendanceHandler extends MonthlyHandler implements I
         listColumn.forEach(column -> column.getStyleClass().remove("column-active"));
 
         anchorPane.getStyleClass().add("column-active");
+    }
+
+    private void initHoverColumn() {
+        List<AnchorPane> listColumn = getListColumn(rootTimeTable);
+        listColumn.remove(listColumn.size() - 1);
+        listColumn.remove(listColumn.size() - 1);
+
+        listColumn.forEach(column -> {
+            column.getStyleClass().add("base-column");
+            Label firstLabel = (Label) column.getChildren().get(1);
+            Label secondLabel = (Label) column.getChildren().get(2);
+            Label thirdLabel = (Label) column.getChildren().get(3);
+            Label forthLabel = (Label) column.getChildren().get(4);
+
+
+            firstLabel.getStyleClass().add("base-label");
+            secondLabel.getStyleClass().add("base-label");
+            thirdLabel.getStyleClass().add("base-label");
+            forthLabel.getStyleClass().add("base-label");
+        });
     }
 
     @Override

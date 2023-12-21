@@ -14,7 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import subsystem.timekeepingmachine.impl.RecordRepository;
 import usecase.detail.IDetailController;
-import usecase.detail.impl.OfficerDetailController;
+import usecase.detail.impl.OfficerAttendController;
 import utils.Constraints;
 import utils.Utils;
 import utils.store.ContextFactory;
@@ -63,7 +63,7 @@ public class OfficerMonthlyTableHandler extends MonthlyHandler implements Initia
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        officerDetailController = new OfficerDetailController(RecordRepository.getInstance());
+        officerDetailController = new OfficerAttendController(RecordRepository.getInstance());
 
         morningSessionLabel.setText("Sáng\n" + "(morningSession)");
         afternoonSessionLabel.setText("Chiều\n" + "(afternoonSession)");

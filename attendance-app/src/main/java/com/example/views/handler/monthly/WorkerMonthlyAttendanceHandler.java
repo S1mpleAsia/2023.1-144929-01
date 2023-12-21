@@ -13,7 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import subsystem.timekeepingmachine.impl.RecordRepository;
 import dto.TableDataDTO;
-import usecase.detail.impl.WorkerDetailController;
+import usecase.detail.impl.WorkerAttendController;
 import utils.Constraints;
 import utils.Utils;
 import utils.store.ContextFactory;
@@ -47,11 +47,11 @@ public class WorkerMonthlyAttendanceHandler extends MonthlyHandler implements In
     @FXML
     public Label workerId;
 
-    private WorkerDetailController monthlyAttendanceController;
+    private WorkerAttendController monthlyAttendanceController;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        monthlyAttendanceController = new WorkerDetailController(RecordRepository.getInstance());
+        monthlyAttendanceController = new WorkerAttendController(RecordRepository.getInstance());
         TableDataDTO employeeInfo = (TableDataDTO) ContextFactory.getContext().getItem("employeeInfo");
 
         employeeNameLabel.setText(employeeInfo.getEmployeeName());
@@ -64,6 +64,7 @@ public class WorkerMonthlyAttendanceHandler extends MonthlyHandler implements In
         System.out.println(LocalDate.of(2023, 12, 7));
         setTimeTableDate(datePicker.getValue(), rootTimeTable);
 
+        initHoverColumn();
         initWeekAttendTime(employeeInfo.getEmployeeId(), getListColumn(rootTimeTable));
     }
 
@@ -109,6 +110,23 @@ public class WorkerMonthlyAttendanceHandler extends MonthlyHandler implements In
         listColumn.forEach(column -> column.getStyleClass().remove("column-active"));
 
         anchorPane.getStyleClass().add("column-active");
+    }
+
+    private void initHoverColumn() {
+        List<AnchorPane> listColumn = getListColumn(rootTimeTable);
+        listColumn.remove(listColumn.size() - 1);
+        listColumn.remove(listColumn.size() - 1);
+
+        listColumn.forEach(column -> {
+            column.getStyleClass().add("base-column");
+            Label firstLabel = (Label) column.getChildren().get(1);
+            Label secondLabel = (Label) column.getChildren().get(2);
+            Label thirdLabel = (Label) column.getChildren().get(3);
+
+            firstLabel.getStyleClass().add("base-label");
+            secondLabel.getStyleClass().add("base-label");
+            thirdLabel.getStyleClass().add("base-label");
+        });
     }
 
     @Override

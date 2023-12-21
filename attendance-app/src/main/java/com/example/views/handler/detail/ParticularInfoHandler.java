@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -13,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import dto.ParticularInfoDTO;
 import dto.WorkerDataByDayDTO;
 import dto.TableDataDTO;
+import javafx.stage.Stage;
 import utils.EmployeeType;
 import utils.Utils;
 import utils.store.ContextFactory;
@@ -63,8 +65,7 @@ public class ParticularInfoHandler extends BaseHandler implements Initializable 
 
     @FXML
     void handleConfirm(ActionEvent event) {
-
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.close();
     }
-
-
 }
