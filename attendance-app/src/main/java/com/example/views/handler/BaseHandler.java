@@ -10,7 +10,9 @@ import javafx.stage.Stage;
 
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 public abstract class BaseHandler {
     public void navigate(String viewPath, String styleSheetPath, Event event) throws IOException {
@@ -56,4 +58,7 @@ public abstract class BaseHandler {
 
         contentRoot.getChildren().add(rootChild);
     }
+
+    public abstract void initialize(URL url, ResourceBundle resourceBundle);
+
 }
