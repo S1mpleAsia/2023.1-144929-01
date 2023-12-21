@@ -1,17 +1,21 @@
 package views.handler;
 
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import javafx.event.ActionEvent;
+
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 public abstract class BaseHandler {
-    public void navigate(String viewPath, String styleSheetPath, ActionEvent event) throws IOException {
+    public void navigate(String viewPath, String styleSheetPath, Event event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(viewPath)));
 
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -25,4 +29,36 @@ public abstract class BaseHandler {
         stage.centerOnScreen();
         stage.show();
     }
+
+    public void displayView(String viewPath, String styleSheetPath, Event event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(viewPath)));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+
+        if (styleSheetPath != null) {
+            scene.getStylesheets().add(String.valueOf(getClass().getResource(styleSheetPath)));
+        }
+
+        stage.setScene(scene);
+        stage.setAlwaysOnTop(true);
+        stage.showAndWait();
+    }
+
+    public void changeContentView(String viewPath, AnchorPane contentRoot) {
+        contentRoot.getChildren().clear();
+
+        Parent rootChild = null;
+
+        try {
+            rootChild = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(viewPath)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        contentRoot.getChildren().add(rootChild);
+    }
+
+    public abstract void initialize(URL url, ResourceBundle resourceBundle);
+
 }

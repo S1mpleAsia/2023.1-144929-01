@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- *
  * @param <T> Object Model
  * @author duongvt
  * @since 24/11/2023
@@ -49,7 +48,7 @@ public class AbstractRepository<T> implements GenericRepository<T> {
             /* Execute query */
             resultSet = statement.executeQuery();
 
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 result.add(rowMapper.mapRow(resultSet));
             }
 
@@ -60,7 +59,7 @@ public class AbstractRepository<T> implements GenericRepository<T> {
             try {
                 if (connection != null) connection.close();
                 if (statement != null) statement.close();
-                if(resultSet != null) resultSet.close();
+                if (resultSet != null) resultSet.close();
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -71,27 +70,19 @@ public class AbstractRepository<T> implements GenericRepository<T> {
 
     private void setParameter(PreparedStatement statement, Object... params) {
         try {
-            for(int i = 0;i < params.length; i++) {
+            for (int i = 0; i < params.length; i++) {
                 Object parameter = params[i];
                 int index = i + 1;
-                if(parameter instanceof Long) {
+                if (parameter instanceof Long) {
                     statement.setLong(index, (Long) parameter);
-                }
-
-                else if(parameter instanceof String) {
+                } else if (parameter instanceof String) {
                     statement.setString(index, (String) parameter);
-                }
-
-                else if(parameter instanceof Integer) {
+                } else if (parameter instanceof Integer) {
                     statement.setInt(index, (Integer) parameter);
-                }
-
-                else if(parameter instanceof Date) {
+                } else if (parameter instanceof Date) {
                     statement.setDate(index, (Date) parameter);
-                }
-
-                else if(parameter == null) {
-                    statement.setNull(index,Types.NVARCHAR);
+                } else if (parameter == null) {
+                    statement.setNull(index, Types.NVARCHAR);
                 }
             }
         } catch (SQLException e) {
@@ -101,11 +92,79 @@ public class AbstractRepository<T> implements GenericRepository<T> {
 
     @Override
     public Long insert(String sql, Object... params) {
+        ResultSet rs = null;
+        Long id = null;
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+            connection = getConnection();
+            assert connection != null;
+            connection.setAutoCommit(false);
+
+            statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            setParameter(statement, params);
+            statement.executeUpdate();
+
+            rs = statement.getGeneratedKeys();
+
+            if(rs.next()) {
+                id = rs.getLong("id");
+            }
+
+            connection.commit();
+            return id;
+        } catch (SQLException e) {
+            System.out.println("Can't not insert into database");
+            e.printStackTrace();
+
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } finally {
+            try {
+                if (connection != null) connection.close();
+                if (statement != null) statement.close();
+                if (rs != null) rs.close();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
         return null;
     }
 
     @Override
     public void update(String sql, Object... params) {
+        Connection connection = null;
+        PreparedStatement statement = null;
 
+        try {
+            connection = getConnection();
+            assert connection != null;
+            connection.setAutoCommit(false);
+
+            statement = connection.prepareStatement(sql);
+            setParameter(statement, params);
+            statement.executeUpdate();
+            connection.commit();
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } finally {
+            try {
+                if (connection != null) connection.close();
+                if (statement != null) statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

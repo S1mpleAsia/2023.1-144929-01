@@ -1,0 +1,10 @@
+.table-column {
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+}
+
+.submit-btn {
+    -fx-background-color: #00a9e3;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
