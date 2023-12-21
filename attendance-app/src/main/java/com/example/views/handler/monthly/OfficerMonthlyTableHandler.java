@@ -113,7 +113,7 @@ public class OfficerMonthlyTableHandler extends MonthlyHandler implements Initia
             LocalDate localDate = Utils.simpleConvert(dateString);
 
             ContextFactory.getContext().putItem("date", localDate);
-            displayView(Constraints.REQUEST_SCREEN_PATH, Constraints.OFFICER_DETAIL_STYLESHEET_PATH, mouseEvent);
+            displayView(Constraints.OFFICER_DETAIL_SCREEN_PATH, Constraints.OFFICER_DETAIL_STYLESHEET_PATH, mouseEvent);
         }
     }
 
