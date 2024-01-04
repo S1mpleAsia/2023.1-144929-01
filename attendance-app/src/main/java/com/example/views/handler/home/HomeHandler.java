@@ -4,12 +4,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import model.Account;
+import model.Employee;
 import subsystem.hrsystem.impl.DepartmentRepository;
 import subsystem.hrsystem.impl.EmployeeRepository;
 import usecase.home.impl.HomeController;
@@ -62,8 +65,10 @@ public class HomeHandler extends BaseHandler implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         homeController = new HomeController(EmployeeRepository.getInstance(), DepartmentRepository.getInstance());
+        Employee currentUser = (Employee) ContextFactory.getContext().getItem("currentUser");
+        Integer departmentId = currentUser.getDepartmentId();
         tableData.clear();
-        tableData.addAll(homeController.getTableData(1));
+        tableData.addAll(homeController.getTableData(departmentId));
 
 
         id.setCellValueFactory(new PropertyValueFactory<>("employeeId"));
@@ -88,6 +93,23 @@ public class HomeHandler extends BaseHandler implements Initializable {
                 changeContentView(Constraints.WORKER_MONTHLY_SCREEN_PATH, content);
             } else if (selectedItem.getEmployeeType().toUpperCase().equals(EmployeeType.OFFICER.name())) {
                 changeContentView(Constraints.OFFICER_MONTHLY_SCREEN_PATH, content);
+            }
+
+        }
+    }
+
+    @FXML
+    void handleDepartmentAttendanceView(MouseEvent event) {
+        if (event.isPrimaryButtonDown() && event.getClickCount() == 1) {
+            Account currentUser = (Account) ContextFactory.getContext().getItem("currentAccount");
+
+            if (currentUser.getRole().toUpperCase().equals(EmployeeType.MANAGER.name())) {
+                changeContentView(Constraints.FACTORY_ATTENDANCE_SCREEN_PATH, content);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Bạn không có quyền này");
+                alert.setHeaderText("Lỗi");
+                alert.showAndWait();
             }
 
         }

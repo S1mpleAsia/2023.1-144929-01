@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afde2768-6b6c-4f19-9a91-ee17b1f7adf2" name="Changes" comment="bt4- final 2">
-      <change afterPath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/bt3-TranMinhQuang.asta.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/~$c tả NVVP.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework06/TranMinhQuang-20200497/Bt6.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework06/TranMinhQuang-20200497/Class Diagram0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework06/TranMinhQuang-20200497/EmployeeEditForm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework06/TranMinhQuang-20200497/EmpyeeListView.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework06/TranMinhQuang-20200497/bt6.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/2023.1-144929-01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2023.1-144929-01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/ActivitiesDiagramNVVP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/ActivitiesDiagramNVVP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/bt3-TranMinhQuang.asta" beforeDir="false" afterPath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/bt3-TranMinhQuang.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/Đặc tả NVVP.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Homework03/20200497-TranMinhQuang/Đặc tả NVVP.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorController$CalculateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorController$CalculateListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/CalculatorView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/MVCCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204523-NgoDucCuong/MVCTutorial/bin/MVCCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorController$CalculateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorController$CalculateListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/CalculatorView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/MVCCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Homework01/20204557-NguyenHuyHoang/MVCTutorial/bin/MVCCalculator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,28 +59,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;quang&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SourceCode/TKXDPhanMem/2023.1-144929-01&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Hoang",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/hogan/2023.1-144929-01/attendance-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SourceCode\TKXDPhanMem\2023.1-144929-01\Homework05\TranMinhQuang-20200497" />
       <recent name="D:\SourceCode\TKXDPhanMem\2023.1-144929-01\Homework04\TranMinhQuang-20200497" />
       <recent name="D:\SourceCode\TKXDPhanMem\2023.1-144929-01\Homework03\20200497-TranMinhQuang" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-249ae16d76d6-7c0527ad" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,6 +110,7 @@
       <workItem from="1700206443833" duration="36000" />
       <workItem from="1700749603158" duration="2935000" />
       <workItem from="1700756838172" duration="1216000" />
+      <workItem from="1703181697973" duration="2580000" />
     </task>
     <task id="LOCAL-00001" summary="bt3 TranMinhQuang">
       <created>1698340345720</created>
@@ -153,5 +168,9 @@
     <MESSAGE value="bt4- completed" />
     <MESSAGE value="bt4- final 2" />
     <option name="LAST_COMMIT_MESSAGE" value="bt4- final 2" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

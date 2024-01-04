@@ -31,7 +31,7 @@
       <Separator layoutY="69.0" prefHeight="3.0" prefWidth="1135.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <AnchorPane layoutY="69.0" prefHeight="650.0" prefWidth="229.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="70.0">
          <children>
-            <AnchorPane layoutY="33.0" prefHeight="70.0" prefWidth="222.0">
+            <AnchorPane onMousePressed="#handleDepartmentAttendanceView" layoutY="33.0" prefHeight="70.0" prefWidth="222.0">
                <children>
                   <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0">
                      <image>

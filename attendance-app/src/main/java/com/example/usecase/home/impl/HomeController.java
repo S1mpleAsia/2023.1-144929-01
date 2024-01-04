@@ -6,6 +6,7 @@ import subsystem.hrsystem.IDepartmentRepository;
 import subsystem.hrsystem.IEmployeeRepository;
 import dto.TableDataDTO;
 import usecase.home.IHomeController;
+import utils.store.ContextFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,6 +19,7 @@ public class HomeController implements IHomeController {
     public HomeController(IEmployeeRepository employeeRepository, IDepartmentRepository departmentRepository) {
         this.employeeRepository = employeeRepository;
         this.departmentRepository = departmentRepository;
+        ContextFactory.getContext().putItem("currentUser", employeeRepository.getEmployeeInfoById((Integer) ContextFactory.getContext().getItem("userEmployeeId")));
     }
 
     @Override

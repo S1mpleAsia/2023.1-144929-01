@@ -67,6 +67,7 @@ public class LoginHandler extends BaseHandler implements Initializable {
     private void checkUserRole(Account account, ActionEvent actionEvent) throws IOException {
         String role = account.getRole();
         ContextFactory.getContext().putItem("userEmployeeId", account.getEmployeeId());
+        ContextFactory.getContext().putItem("currentAccount", account);
         if ("manager".equals(role.toLowerCase())) {
             navigate(Constraints.HOME_SCREEN_PATH, Constraints.HOME_STYLESHEET_PATH, actionEvent);
 
